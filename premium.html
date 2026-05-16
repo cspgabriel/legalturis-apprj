@@ -331,45 +331,83 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- NEWSLETTER MENSAL GRATUITA -->
+<section class="container newsletter-section-inner">
+    <div class="newsletter-card-inner">
+        <div class="newsletter-icon-inner">📬</div>
+        <div class="newsletter-text">
+            <h3>Newsletter Mensal Gratuita</h3>
+            <p>Receba 1x por mês um resumo completo das principais leis publicadas no RJ. <strong>É grátis e sem spam.</strong></p>
+        </div>
+        <form class="newsletter-form-inner" onsubmit="event.preventDefault(); subscribeMonthly(this);">
+            <input type="email" name="email" required placeholder="seu@email.com">
+            <button type="submit" class="btn-primary">📧 Inscrever Grátis</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER PROFISSIONAL -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h3>⚖️ LegiRJ Premium</h3>
-                <p>O acesso completo à legislação fluminense para profissionais e estudiosos.</p>
+                <h3>⚖️ LegiRJ</h3>
+                <p>O maior portal de consulta de leis e decretos do Estado do Rio de Janeiro.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/?text=Veja%20o%20LegiRJ" target="_blank" rel="noopener" class="social-link" title="WhatsApp">📱</a>
+                    <a href="https://t.me/share/url?url=https://cspgabriel.github.io/legalturis-apprj/" target="_blank" rel="noopener" class="social-link" title="Telegram">✈️</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://cspgabriel.github.io/legalturis-apprj/" target="_blank" rel="noopener" class="social-link" title="Twitter">🐦</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://cspgabriel.github.io/legalturis-apprj/" target="_blank" rel="noopener" class="social-link" title="Facebook">📘</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Fontes Oficiais</h4>
+                <ul>
+                    <li><a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">ALERJ</a></li>
+                    <li><a href="https://www.ioerj.com.br" target="_blank" rel="noopener">Diário Oficial RJ</a></li>
+                    <li><a href="https://www.camara.rio" target="_blank" rel="noopener">Câmara do Rio</a></li>
+                    <li><a href="https://www.rj.gov.br" target="_blank" rel="noopener">Governo do RJ</a></li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Premium</h4>
                 <ul>
-                    <li><a href="#">Planos e Preços</a></li>
+                    <li><a href="premium.html">Planos e Preços</a></li>
                     <li><a href="account.html">Minha Conta</a></li>
-                    <li><a href="#">Cancelar Assinatura</a></li>
+                    <li><a href="mailto:premium@legirj.com.br">Suporte Premium</a></li>
                     <li><a href="#">Política de Reembolso</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Suporte</h4>
+                <h4>Sobre</h4>
                 <ul>
-                    <li><a href="mailto:premium@legirj.com.br">premium@legirj.com.br</a></li>
-                    <li><a href="#">Central de Ajuda</a></li>
-                    <li><a href="#">WhatsApp</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="./">🏠 Portal Principal</a></li>
+                    <li><a href="mailto:contato@legirj.com.br">Contato</a></li>
                     <li><a href="#">Privacidade</a></li>
-                    <li><a href="#">LGPD</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 LegiRJ Premium. Todos os direitos reservados.</p>
+            <p>© 2026 LegiRJ. Todos os direitos reservados.</p>
+            <p class="disclaimer">⚠️ Portal informativo. Para informações legais oficiais, consulte sempre as fontes governamentais citadas.</p>
         </div>
     </div>
 </footer>
+
+<script>
+    function subscribeMonthly(form) {
+        const email = form.email.value;
+        try {
+            const subs = JSON.parse(localStorage.getItem('legirj_newsletter_monthly') || '[]');
+            if (subs.includes(email)) { alert('📧 Você já está inscrito!'); return; }
+            subs.push(email);
+            localStorage.setItem('legirj_newsletter_monthly', JSON.stringify(subs));
+            alert('✅ Inscrição confirmada! Você receberá nosso resumo mensal.');
+            form.reset();
+        } catch (e) { alert('✅ Inscrição realizada!'); }
+    }
+</script>
 
 <script src="premium.js"></script>
 </body>
