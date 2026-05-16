@@ -6,41 +6,41 @@
       "id": 1,
       "numero": "9.064",
       "tipo": "Lei",
-      "titulo": "Institui o Programa Estadual de Microcrédito",
-      "resumo": "Programa Estadual de Microcrédito para apoio a micro e pequenas empresas do Estado do Rio de Janeiro.",
-      "categoria": "comercial",
+      "titulo": "Programa Estadual de Microcrédito Produtivo Orientado",
+      "resumo": "Institui o Programa Estadual de Microcrédito Produtivo Orientado, voltado à concessão de crédito a microempreendedores, autônomos e pequenas empresas no Estado do Rio de Janeiro.",
+      "categoria": "tributaria",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.064-institui-o-programa-estadual-de-microcredito/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.064-programa-estadual-de-microcredito-produtivo-orientado/"
     },
     {
       "id": 2,
       "numero": "9.130",
       "tipo": "Lei",
-      "titulo": "Política Estadual de Mudanças Climáticas",
-      "resumo": "Estabelece a política estadual de combate às mudanças climáticas e redução de emissões de gases de efeito estufa.",
+      "titulo": "Política Estadual sobre Mudança do Clima e Desenvolvimento Sustentável",
+      "resumo": "Institui a Política Estadual sobre Mudança do Clima e Desenvolvimento Sustentável do Estado do Rio de Janeiro, estabelecendo metas de redução de emissões de gases de efeito estufa.",
       "categoria": "ambiental",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.130-politica-estadual-de-mudancas-climaticas/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.130-politica-estadual-sobre-mudanca-do-clima-e-desenvolvimento-sustentavel/"
     },
     {
       "id": 3,
       "numero": "9.045",
       "tipo": "Lei",
-      "titulo": "Lei de Incentivo à Inovação Tecnológica",
-      "resumo": "Cria incentivos fiscais para empresas de tecnologia e startups que se instalem no Estado.",
-      "categoria": "comercial",
+      "titulo": "Lei de Incentivo à Inovação Tecnológica do Estado do Rio de Janeiro",
+      "resumo": "Estabelece incentivos fiscais e marco regulatório para empresas de tecnologia, startups e pesquisa científica no Estado do Rio de Janeiro.",
+      "categoria": "administrativa",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.045-lei-de-incentivo-a-inovacao-tecnologica/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.045-lei-de-incentivo-a-inovacao-tecnologica-do-estado-do-rio-de-janeiro/"
     },
     {
       "id": 4,
       "numero": "8.890",
-      "tipo": "Resolução",
+      "tipo": "Lei",
       "titulo": "Normas de Funcionamento dos Espaços Públicos Estaduais",
-      "resumo": "Estabelece normas para o funcionamento e utilização de espaços públicos no Estado.",
+      "resumo": "Disciplina o uso e funcionamento de praças, parques, áreas de lazer e espaços públicos sob administração do Estado do Rio de Janeiro.",
       "categoria": "administrativa",
       "cidade": "estado",
       "ano": 2023,
@@ -50,41 +50,41 @@
       "id": 5,
       "numero": "9.102",
       "tipo": "Lei",
-      "titulo": "Código de Saúde Pública Estadual",
-      "resumo": "Estabelece normas de saúde pública para todo o Estado do Rio de Janeiro.",
+      "titulo": "Código de Saúde Pública do Estado do Rio de Janeiro",
+      "resumo": "Atualiza e consolida o Código de Saúde Pública Estadual, definindo direitos dos usuários do SUS e organização da rede de atenção à saúde no RJ.",
       "categoria": "saude",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.102-codigo-de-saude-publica-estadual/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.102-codigo-de-saude-publica-do-estado-do-rio-de-janeiro/"
     },
     {
       "id": 6,
       "numero": "8.765",
-      "tipo": "Decreto",
-      "titulo": "Diretrizes de Urbanismo Estadual",
-      "resumo": "Define as diretrizes para planejamento urbano e desenvolvimento das cidades do RJ.",
+      "tipo": "Lei",
+      "titulo": "Diretrizes de Política Urbana e Desenvolvimento Regional",
+      "resumo": "Estabelece as diretrizes para o desenvolvimento urbano sustentável e regional integrado do Estado do Rio de Janeiro.",
       "categoria": "urbanismo",
       "cidade": "estado",
       "ano": 2023,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.765-diretrizes-de-urbanismo-estadual/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.765-diretrizes-de-politica-urbana-e-desenvolvimento-regional/"
     },
     {
       "id": 7,
       "numero": "9.200",
       "tipo": "Lei",
-      "titulo": "Gratuidade no Transporte Público para Idosos",
-      "resumo": "Garante gratuidade no transporte intermunicipal para pessoas com 60 anos ou mais.",
+      "titulo": "Gratuidade no Transporte Público para Pessoas Idosas",
+      "resumo": "Regulamenta a gratuidade no transporte coletivo intermunicipal do Estado do Rio de Janeiro para pessoas com 60 anos ou mais.",
       "categoria": "transporte",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.200-gratuidade-no-transporte-publico-para-idosos/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.200-gratuidade-no-transporte-publico-para-pessoas-idosas/"
     },
     {
       "id": 8,
       "numero": "9.180",
       "tipo": "Lei",
       "titulo": "Programa Estadual de Segurança Pública Integrada",
-      "resumo": "Cria programa de integração entre polícias estaduais e municipais para combate à criminalidade.",
+      "resumo": "Cria o Programa Estadual de Segurança Pública Integrada, articulando ações entre Polícia Militar, Polícia Civil, Corpo de Bombeiros e Guarda Municipal.",
       "categoria": "seguranca",
       "cidade": "estado",
       "ano": 2024,
@@ -95,7 +95,7 @@
       "numero": "9.220",
       "tipo": "Lei",
       "titulo": "Plano Estadual de Educação Tecnológica",
-      "resumo": "Institui ensino de tecnologia e programação nas escolas públicas estaduais.",
+      "resumo": "Institui o Plano Estadual de Educação Tecnológica, prevendo expansão do ensino técnico e tecnológico nas escolas estaduais do Rio de Janeiro.",
       "categoria": "educacao",
       "cidade": "estado",
       "ano": 2024,
@@ -104,343 +104,343 @@
     {
       "id": 10,
       "numero": "8.950",
-      "tipo": "Decreto",
-      "titulo": "Regulamento do ICMS Estadual",
-      "resumo": "Regulamenta a cobrança do ICMS no Estado do Rio de Janeiro com novas alíquotas setoriais.",
+      "tipo": "Lei",
+      "titulo": "Regulamento do ICMS - Operações Internas e Interestaduais",
+      "resumo": "Atualiza o Regulamento do ICMS no Estado do Rio de Janeiro, definindo alíquotas, isenções e regimes especiais de tributação.",
       "categoria": "tributaria",
       "cidade": "estado",
       "ano": 2023,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.950-regulamento-do-icms-estadual/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.950-regulamento-do-icms-operacoes-internas-e-interestaduais/"
     },
     {
       "id": 11,
-      "numero": "7.450",
-      "tipo": "Lei",
-      "titulo": "Plano Diretor da Cidade do Rio de Janeiro",
-      "resumo": "Estabelece diretrizes para o desenvolvimento urbano sustentável do município.",
+      "numero": "270",
+      "tipo": "Lei Complementar",
+      "titulo": "Plano Diretor de Desenvolvimento Urbano Sustentável da Cidade do Rio de Janeiro",
+      "resumo": "Atualiza o Plano Diretor da Cidade do Rio de Janeiro, estabelecendo as diretrizes de uso e ocupação do solo urbano para os próximos dez anos.",
       "categoria": "urbanismo",
       "cidade": "rio",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.450-plano-diretor-da-cidade-do-rio-de-janeiro/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/270-plano-diretor-de-desenvolvimento-urbano-sustentavel-da-cidade-do-rio-de-janeiro/"
     },
     {
       "id": 12,
       "numero": "7.508",
       "tipo": "Lei",
-      "titulo": "Lei Verde Carioca",
-      "resumo": "Programa de arborização urbana e preservação de áreas verdes na cidade do Rio.",
+      "titulo": "Programa Rio Mais Verde - Política Ambiental Municipal",
+      "resumo": "Institui o Programa Rio Mais Verde, com diretrizes para arborização urbana, gestão de resíduos, qualidade do ar e proteção de áreas verdes da cidade do Rio de Janeiro.",
       "categoria": "ambiental",
       "cidade": "rio",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.508-lei-verde-carioca/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.508-programa-rio-mais-verde-politica-ambiental-municipal/"
     },
     {
       "id": 13,
       "numero": "7.380",
-      "tipo": "Decreto",
-      "titulo": "Plano de Mobilidade Urbana do Rio",
-      "resumo": "Define diretrizes para BRT, VLT, metrô e ciclovias na cidade.",
+      "tipo": "Lei",
+      "titulo": "Plano de Mobilidade Urbana Sustentável da Cidade do Rio de Janeiro",
+      "resumo": "Estabelece o Plano de Mobilidade Urbana Sustentável (PMUS) da Cidade do Rio de Janeiro, priorizando transporte público, ciclovias e mobilidade ativa.",
       "categoria": "transporte",
       "cidade": "rio",
       "ano": 2023,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.380-plano-de-mobilidade-urbana-do-rio/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.380-plano-de-mobilidade-urbana-sustentavel-da-cidade-do-rio-de-janeiro/"
     },
     {
       "id": 14,
       "numero": "7.412",
       "tipo": "Lei",
-      "titulo": "Lei de Fomento à Cultura Carioca",
-      "resumo": "Cria fundo municipal de apoio a artistas e produtores culturais do Rio.",
+      "titulo": "Lei de Fomento e Incentivo à Cultura Carioca",
+      "resumo": "Cria mecanismos de fomento, financiamento e proteção à produção cultural na cidade do Rio de Janeiro, incluindo o Fundo Municipal de Cultura.",
       "categoria": "cultura",
       "cidade": "rio",
       "ano": 2023,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.412-lei-de-fomento-a-cultura-carioca/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.412-lei-de-fomento-e-incentivo-a-cultura-carioca/"
     },
     {
       "id": 15,
       "numero": "7.490",
       "tipo": "Lei",
-      "titulo": "Programa Rio Cidade Turística",
-      "resumo": "Incentivos fiscais e estruturação de polos turísticos na cidade.",
+      "titulo": "Programa Rio Cidade Turística - Promoção e Desenvolvimento do Turismo",
+      "resumo": "Estabelece o Programa Rio Cidade Turística, com diretrizes para promoção do turismo, qualificação profissional e infraestrutura turística no município.",
       "categoria": "turismo",
       "cidade": "rio",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.490-programa-rio-cidade-turistica/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.490-programa-rio-cidade-turistica-promocao-e-desenvolvimento-do-turismo/"
     },
     {
       "id": 16,
       "numero": "3.589",
       "tipo": "Lei",
-      "titulo": "Programa Niterói Sustentável",
-      "resumo": "Política municipal de sustentabilidade ambiental e energia limpa.",
+      "titulo": "Programa Niterói Sustentável - Política Ambiental Municipal",
+      "resumo": "Institui o Programa Niterói Sustentável, com ações de preservação ambiental, gestão de resíduos e desenvolvimento sustentável no município.",
       "categoria": "ambiental",
       "cidade": "niteroi",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.589-programa-niteroi-sustentavel/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.589-programa-niteroi-sustentavel-politica-ambiental-municipal/"
     },
     {
       "id": 17,
       "numero": "3.612",
       "tipo": "Lei",
-      "titulo": "Programa Habitacional de Interesse Social",
-      "resumo": "Cria programa de moradia popular em Niterói com 5 mil unidades.",
+      "titulo": "Programa Habitacional de Interesse Social - Niterói Habita",
+      "resumo": "Cria o Programa Niterói Habita, oferecendo subsídios e linhas de financiamento para famílias de baixa renda adquirirem moradia digna no município.",
       "categoria": "habitacao",
       "cidade": "niteroi",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.612-programa-habitacional-de-interesse-social/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.612-programa-habitacional-de-interesse-social-niteroi-habita/"
     },
     {
       "id": 18,
       "numero": "3.550",
       "tipo": "Decreto",
-      "titulo": "Sistema de Transporte Aquaviário",
-      "resumo": "Regulamenta o sistema de barcas e catraias entre Niterói e Rio.",
+      "titulo": "Sistema Municipal de Transporte Aquaviário",
+      "resumo": "Regulamenta o transporte aquaviário municipal de Niterói, incluindo travessias entre os bairros oceânicos e da Região Metropolitana.",
       "categoria": "transporte",
       "cidade": "niteroi",
       "ano": 2023,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.550-sistema-de-transporte-aquaviario/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.550-sistema-municipal-de-transporte-aquaviario/"
     },
     {
       "id": 19,
       "numero": "1.025",
       "tipo": "Lei",
-      "titulo": "Plano Municipal de Educação",
-      "resumo": "Plano decenal de educação do município de São Gonçalo.",
+      "titulo": "Plano Municipal de Educação 2024-2034",
+      "resumo": "Aprova o Plano Municipal de Educação de São Gonçalo para o decênio 2024-2034, com metas para todos os níveis de ensino.",
       "categoria": "educacao",
       "cidade": "sao-goncalo",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.025-plano-municipal-de-educacao/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.025-plano-municipal-de-educacao-2024-2034/"
     },
     {
       "id": 20,
       "numero": "1.040",
       "tipo": "Lei",
-      "titulo": "Programa Saúde da Família Expandido",
-      "resumo": "Expansão do programa Saúde da Família em São Gonçalo.",
+      "titulo": "Programa Saúde da Família Expandido - São Gonçalo Saudável",
+      "resumo": "Expande a cobertura da Estratégia Saúde da Família em São Gonçalo, com criação de novas unidades e ampliação do atendimento.",
       "categoria": "saude",
       "cidade": "sao-goncalo",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.040-programa-saude-da-familia-expandido/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.040-programa-saude-da-familia-expandido-sao-goncalo-saudavel/"
     },
     {
       "id": 21,
       "numero": "2.890",
       "tipo": "Lei",
-      "titulo": "Polo Industrial de Caxias",
-      "resumo": "Cria incentivos para o polo industrial e logístico de Duque de Caxias.",
+      "titulo": "Programa de Desenvolvimento do Polo Industrial de Duque de Caxias",
+      "resumo": "Estabelece incentivos fiscais e infraestrutura para empresas que se instalarem no Polo Industrial de Duque de Caxias.",
       "categoria": "comercial",
       "cidade": "duque-caxias",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.890-polo-industrial-de-caxias/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.890-programa-de-desenvolvimento-do-polo-industrial-de-duque-de-caxias/"
     },
     {
       "id": 22,
       "numero": "4.120",
       "tipo": "Lei",
-      "titulo": "Hospital Municipal Modernizado",
-      "resumo": "Modernização e expansão do Hospital Municipal de Nova Iguaçu.",
+      "titulo": "Modernização do Hospital Municipal e Rede de Saúde",
+      "resumo": "Autoriza investimentos para modernização do Hospital Municipal e ampliação da rede de saúde de Nova Iguaçu.",
       "categoria": "saude",
       "cidade": "nova-iguacu",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/4.120-hospital-municipal-modernizado/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/4.120-modernizacao-do-hospital-municipal-e-rede-de-saude/"
     },
     {
       "id": 23,
       "numero": "8.825",
       "tipo": "Lei",
-      "titulo": "Programa de Desenvolvimento Petrolífero",
-      "resumo": "Desenvolvimento econômico baseado em royalties do petróleo.",
+      "titulo": "Programa de Desenvolvimento da Cadeia Produtiva do Petróleo",
+      "resumo": "Estabelece incentivos para empresas da cadeia produtiva do petróleo e gás natural se instalarem em Campos dos Goytacazes.",
       "categoria": "comercial",
       "cidade": "campos",
-      "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.825-programa-de-desenvolvimento-petrolifero/"
+      "ano": 2023,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.825-programa-de-desenvolvimento-da-cadeia-produtiva-do-petroleo/"
     },
     {
       "id": 24,
       "numero": "8.220",
       "tipo": "Lei",
-      "titulo": "Petrópolis Cidade Imperial",
-      "resumo": "Programa de preservação histórica e fomento ao turismo.",
+      "titulo": "Política Municipal de Turismo - Petrópolis Cidade Imperial",
+      "resumo": "Estabelece a política de desenvolvimento turístico de Petrópolis, valorizando o patrimônio histórico, cultural e natural.",
       "categoria": "turismo",
       "cidade": "petropolis",
-      "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.220-petropolis-cidade-imperial/"
+      "ano": 2023,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.220-politica-municipal-de-turismo-petropolis-cidade-imperial/"
     },
     {
       "id": 25,
       "numero": "8.180",
       "tipo": "Lei",
-      "titulo": "Proteção da Mata Atlântica Petropolitana",
-      "resumo": "Proteção das áreas de Mata Atlântica em Petrópolis.",
+      "titulo": "Proteção da Mata Atlântica e Recuperação de Encostas",
+      "resumo": "Institui programa de proteção da Mata Atlântica petropolitana e recuperação de encostas, em resposta às tragédias de deslizamentos.",
       "categoria": "ambiental",
       "cidade": "petropolis",
       "ano": 2023,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.180-protecao-da-mata-atlantica-petropolitana/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/8.180-protecao-da-mata-atlantica-e-recuperacao-de-encostas/"
     },
     {
       "id": 26,
       "numero": "5.640",
       "tipo": "Lei",
-      "titulo": "Programa de Qualificação Profissional",
-      "resumo": "Capacitação profissional para a indústria siderúrgica e tecnologia.",
+      "titulo": "Programa Municipal de Qualificação Profissional",
+      "resumo": "Cria o Programa Volta Redonda Qualifica, oferecendo cursos profissionalizantes gratuitos para trabalhadores em parceria com SENAI e SENAC.",
       "categoria": "trabalhista",
       "cidade": "volta-redonda",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/5.640-programa-de-qualificacao-profissional/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/5.640-programa-municipal-de-qualificacao-profissional/"
     },
     {
       "id": 27,
       "numero": "2.945",
       "tipo": "Lei",
-      "titulo": "Programa Casa Própria Maricá",
-      "resumo": "Renda Básica de Cidadania e programa habitacional em Maricá.",
+      "titulo": "Programa Habitacional Casa Própria Maricá",
+      "resumo": "Cria o Programa Casa Própria Maricá, com financiamento subsidiado para aquisição de moradia popular, utilizando recursos dos royalties do petróleo.",
       "categoria": "habitacao",
       "cidade": "marica",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.945-programa-casa-propria-marica/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.945-programa-habitacional-casa-propria-marica/"
     },
     {
       "id": 28,
       "numero": "4.560",
       "tipo": "Lei",
-      "titulo": "Polo Tecnológico de Macaé",
-      "resumo": "Desenvolvimento de polo tecnológico ligado à indústria do petróleo.",
-      "categoria": "comercial",
+      "titulo": "Polo Tecnológico de Macaé - Capital do Petróleo",
+      "resumo": "Cria o Polo Tecnológico de Macaé, com incentivos para empresas de tecnologia, P&D e inovação ligadas ao setor de energia.",
+      "categoria": "administrativa",
       "cidade": "macae",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/4.560-polo-tecnologico-de-macae/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/4.560-polo-tecnologico-de-macae-capital-do-petroleo/"
     },
     {
       "id": 29,
       "numero": "3.020",
       "tipo": "Lei",
-      "titulo": "Cabo Frio Destino Turístico",
-      "resumo": "Programa de desenvolvimento turístico para a Região dos Lagos.",
+      "titulo": "Plano de Desenvolvimento Turístico de Cabo Frio",
+      "resumo": "Estabelece o Plano de Desenvolvimento Turístico de Cabo Frio, com diretrizes para turismo sustentável, ordenamento das praias e qualificação do setor.",
       "categoria": "turismo",
       "cidade": "cabo-frio",
-      "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.020-cabo-frio-destino-turistico/"
+      "ano": 2023,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.020-plano-de-desenvolvimento-turistico-de-cabo-frio/"
     },
     {
       "id": 30,
       "numero": "4.890",
       "tipo": "Lei",
-      "titulo": "Proteção das Serras Friburguenses",
-      "resumo": "Preservação das áreas montanhosas e prevenção de desastres.",
+      "titulo": "Proteção das Serras Friburguenses e Áreas de Mananciais",
+      "resumo": "Cria a Política Municipal de Proteção das Serras Friburguenses e dos mananciais hídricos, com áreas de preservação permanente.",
       "categoria": "ambiental",
       "cidade": "nova-friburgo",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/4.890-protecao-das-serras-friburguenses/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/4.890-protecao-das-serras-friburguenses-e-areas-de-mananciais/"
     },
     {
       "id": 31,
       "numero": "3.120",
       "tipo": "Lei",
-      "titulo": "Teresópolis Capital do Esporte",
-      "resumo": "Incentivo a esportes de aventura e turismo esportivo.",
+      "titulo": "Teresópolis Capital do Esporte de Aventura",
+      "resumo": "Estabelece políticas de fomento ao esporte e turismo de aventura em Teresópolis, valorizando trilhas, montanhismo e esportes ao ar livre.",
       "categoria": "esporte",
       "cidade": "teresopolis",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.120-teresopolis-capital-do-esporte/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.120-teresopolis-capital-do-esporte-de-aventura/"
     },
     {
       "id": 32,
       "numero": "3.456",
       "tipo": "Lei",
-      "titulo": "Proteção da Costa Verde",
-      "resumo": "Proteção marinha e preservação das ilhas de Angra dos Reis.",
+      "titulo": "Programa de Proteção da Costa Verde e Baía da Ilha Grande",
+      "resumo": "Institui o Programa de Proteção da Costa Verde, com gestão integrada dos recursos marinhos, costeiros e turísticos da Baía da Ilha Grande.",
       "categoria": "ambiental",
       "cidade": "angra",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.456-protecao-da-costa-verde/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.456-programa-de-protecao-da-costa-verde-e-baia-da-ilha-grande/"
     },
     {
       "id": 33,
       "numero": "2.180",
       "tipo": "Lei",
-      "titulo": "Saúde Belford Roxo 2030",
-      "resumo": "Plano de expansão da rede municipal de saúde.",
+      "titulo": "Plano Municipal de Saúde 2024-2030 - Belford Roxo Saudável",
+      "resumo": "Aprova o Plano Municipal de Saúde de Belford Roxo, com metas de expansão da Atenção Primária e modernização da rede de saúde.",
       "categoria": "saude",
       "cidade": "belford-roxo",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.180-saude-belford-roxo-2030/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.180-plano-municipal-de-saude-2024-2030-belford-roxo-saudavel/"
     },
     {
       "id": 34,
       "numero": "2.745",
       "tipo": "Lei",
-      "titulo": "Comperj e Desenvolvimento Local",
-      "resumo": "Diretrizes para integração do Comperj com a economia local.",
-      "categoria": "comercial",
+      "titulo": "Programa de Desenvolvimento Local - Itaboraí e Comperj",
+      "resumo": "Institui medidas de desenvolvimento local integradas ao Complexo Petroquímico do Rio (COMPERJ) em Itaboraí.",
+      "categoria": "administrativa",
       "cidade": "itaborai",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.745-comperj-e-desenvolvimento-local/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/2.745-programa-de-desenvolvimento-local-itaborai-e-comperj/"
     },
     {
       "id": 35,
       "numero": "1.890",
       "tipo": "Lei",
-      "titulo": "Proteção da Baía de Guanabara - Magé",
-      "resumo": "Despoluição e preservação da costa de Magé.",
+      "titulo": "Proteção da Baía de Guanabara - Vertente de Magé",
+      "resumo": "Cria programa municipal de proteção da Baía de Guanabara, com saneamento, despoluição e proteção de manguezais.",
       "categoria": "ambiental",
       "cidade": "mage",
-      "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.890-protecao-da-baia-de-guanabara-mage/"
+      "ano": 2023,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.890-protecao-da-baia-de-guanabara-vertente-de-mage/"
     },
     {
       "id": 36,
       "numero": "3.890",
       "tipo": "Lei",
-      "titulo": "Polo Automotivo de Resende",
-      "resumo": "Incentivos para o polo automotivo e indústria de defesa.",
+      "titulo": "Polo Automotivo de Resende - Incentivos Industriais",
+      "resumo": "Estabelece incentivos fiscais e infraestrutura para o Polo Automotivo de Resende, fortalecendo a vocação industrial do município.",
       "categoria": "comercial",
       "cidade": "resende",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.890-polo-automotivo-de-resende/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.890-polo-automotivo-de-resende-incentivos-industriais/"
     },
     {
       "id": 37,
       "numero": "5.120",
       "tipo": "Lei",
-      "titulo": "Educação Tecnológica Barra Mansa",
-      "resumo": "Implementação de educação técnica e profissionalizante.",
+      "titulo": "Programa Barra Mansa Tecnológica - Educação Profissional",
+      "resumo": "Cria o Programa Barra Mansa Tecnológica, voltado à educação profissional e tecnológica de jovens e adultos do município.",
       "categoria": "educacao",
       "cidade": "barra-mansa",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/5.120-educacao-tecnologica-barra-mansa/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/5.120-programa-barra-mansa-tecnologica-educacao-profissional/"
     },
     {
       "id": 38,
       "numero": "9.250",
       "tipo": "Lei",
-      "titulo": "Lei de Proteção de Animais Estadual",
-      "resumo": "Proteção integral aos animais domésticos e silvestres no Estado.",
-      "categoria": "civil",
+      "titulo": "Lei Estadual de Proteção e Defesa dos Direitos dos Animais",
+      "resumo": "Consolida normas estaduais de proteção animal, regulamentando o trato com animais domésticos, silvestres e exóticos.",
+      "categoria": "ambiental",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.250-lei-de-protecao-de-animais-estadual/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.250-lei-estadual-de-protecao-e-defesa-dos-direitos-dos-animais/"
     },
     {
       "id": 39,
       "numero": "9.280",
       "tipo": "Lei",
-      "titulo": "Programa Primeiro Emprego Jovem RJ",
-      "resumo": "Incentivos para contratação de jovens em primeiro emprego.",
+      "titulo": "Programa Estadual Primeiro Emprego Jovem RJ",
+      "resumo": "Cria incentivos fiscais para contratação de jovens em primeiro emprego e estabelece programa de qualificação profissional juvenil.",
       "categoria": "trabalhista",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.280-programa-primeiro-emprego-jovem-rj/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.280-programa-estadual-primeiro-emprego-jovem-rj/"
     },
     {
       "id": 40,
       "numero": "9.310",
       "tipo": "Lei",
-      "titulo": "Refinanciamento de Dívidas Tributárias",
-      "resumo": "Programa de refinanciamento de débitos tributários estaduais.",
+      "titulo": "Programa de Refinanciamento de Dívidas Tributárias - REFIS-RJ 2024",
+      "resumo": "Institui o REFIS-RJ 2024, programa de regularização de débitos tributários estaduais com descontos em multas e juros.",
       "categoria": "tributaria",
       "cidade": "estado",
       "ano": 2024,
-      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.310-refinanciamento-de-dividas-tributarias/"
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.310-programa-de-refinanciamento-de-dividas-tributarias-refis-rj-2024/"
     }
   ]
 }

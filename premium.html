@@ -95,24 +95,24 @@
             <p>Recursos exclusivos para profissionais e estudiosos da legislação</p>
         </div>
 
-        <div class="comparison-table">
+        <div class="comparison-table" style="grid-template-columns: 1fr 1fr;">
             <div class="comparison-col free-col">
                 <div class="comparison-header">
                     <h3>🆓 Gratuito</h3>
                     <div class="comparison-price">R$ 0<small>/mês</small></div>
                 </div>
                 <ul class="comparison-features">
-                    <li>✓ Consulta a leis públicas</li>
-                    <li>✓ Busca básica</li>
-                    <li>✓ Favoritos (até 10)</li>
-                    <li>✓ Compartilhamento</li>
+                    <li>✓ Consulta a todas as leis e decretos</li>
+                    <li>✓ Busca por nome, número e categoria</li>
+                    <li>✓ Filtros por cidade e tema</li>
+                    <li>✓ Favoritar até 10 leis</li>
+                    <li>✓ Compartilhamento em redes sociais</li>
+                    <li>✓ Newsletter mensal gratuita</li>
+                    <li>✓ Ver últimas 5 notícias jurídicas</li>
                     <li class="disabled">✗ Sem anúncios</li>
-                    <li class="disabled">✗ Relatórios mensais</li>
-                    <li class="disabled">✗ Alertas personalizados</li>
-                    <li class="disabled">✗ Download em PDF</li>
-                    <li class="disabled">✗ Comparativo entre leis</li>
-                    <li class="disabled">✗ Histórico de alterações</li>
-                    <li class="disabled">✗ API de consulta</li>
+                    <li class="disabled">✗ Notícias jurídicas ilimitadas</li>
+                    <li class="disabled">✗ Alertas de notícias por email</li>
+                    <li class="disabled">✗ Favoritos ilimitados</li>
                     <li class="disabled">✗ Suporte prioritário</li>
                 </ul>
                 <a href="./" class="btn-comparison-free">Continuar Gratuito</a>
@@ -123,48 +123,25 @@
                 <div class="comparison-header">
                     <h3>👑 Premium</h3>
                     <div class="comparison-price">
-                        <span class="price-old">R$ 49,90</span>
-                        R$ 29<small>,90/mês</small>
+                        <span class="price-old">R$ 29,90</span>
+                        R$ 19<small>,90/mês</small>
                     </div>
-                    <div class="price-savings">💰 Economia de 40% no plano anual</div>
+                    <div class="price-savings">💰 Cancele quando quiser</div>
                 </div>
                 <ul class="comparison-features">
-                    <li>✓ <strong>Tudo do gratuito</strong></li>
-                    <li>✓ <strong>Sem anúncios</strong> em toda plataforma</li>
-                    <li>✓ <strong>Relatórios mensais</strong> personalizados por email</li>
-                    <li>✓ <strong>Alertas em tempo real</strong> de novas leis</li>
-                    <li>✓ <strong>Download em PDF</strong> de qualquer lei</li>
-                    <li>✓ <strong>Comparativo</strong> entre versões de leis</li>
-                    <li>✓ <strong>Histórico de alterações</strong> legislativas</li>
+                    <li>✓ <strong>Tudo do plano gratuito</strong></li>
+                    <li>✓ <strong>Sem anúncios</strong> em toda a plataforma</li>
+                    <li>✓ <strong>Notícias jurídicas ilimitadas</strong> (STF, STJ, CNJ, TJRJ, etc)</li>
+                    <li>✓ <strong>Alertas personalizados</strong> por email (diário/semanal/mensal)</li>
+                    <li>✓ <strong>Filtros avançados</strong> por fonte e palavra-chave</li>
+                    <li>✓ <strong>Notificações push</strong> no navegador</li>
                     <li>✓ <strong>Favoritos ilimitados</strong></li>
-                    <li>✓ <strong>API de consulta</strong> programática</li>
-                    <li>✓ <strong>Suporte prioritário</strong> 24/7</li>
+                    <li>✓ <strong>Newsletter Premium</strong> semanal com análises</li>
+                    <li>✓ <strong>Suporte prioritário</strong> por email</li>
                     <li>✓ <strong>Acesso antecipado</strong> a novas features</li>
-                    <li>✓ <strong>Newsletter exclusiva</strong> semanal</li>
                 </ul>
                 <button class="btn-comparison-premium" onclick="premium.subscribe('mensal')">
                     🚀 Assinar Premium
-                </button>
-            </div>
-
-            <div class="comparison-col pro-col">
-                <div class="comparison-header">
-                    <h3>💼 Profissional</h3>
-                    <div class="comparison-price">R$ 79<small>,90/mês</small></div>
-                </div>
-                <ul class="comparison-features">
-                    <li>✓ <strong>Tudo do Premium</strong></li>
-                    <li>✓ <strong>Múltiplos usuários</strong> (até 5)</li>
-                    <li>✓ <strong>Painel admin</strong> empresarial</li>
-                    <li>✓ <strong>Relatórios White-label</strong></li>
-                    <li>✓ <strong>Integração customizada</strong></li>
-                    <li>✓ <strong>API ilimitada</strong></li>
-                    <li>✓ <strong>Treinamento</strong> da equipe</li>
-                    <li>✓ <strong>Consultor jurídico</strong> dedicado</li>
-                    <li>✓ <strong>SLA garantido</strong></li>
-                </ul>
-                <button class="btn-comparison-pro" onclick="premium.subscribe('profissional')">
-                    💼 Assinar Profissional
                 </button>
             </div>
         </div>
@@ -181,44 +158,44 @@
 
         <div class="benefits-grid">
             <div class="benefit-card">
-                <div class="benefit-icon">📊</div>
-                <h3>Relatórios Mensais</h3>
-                <p>Receba mensalmente um relatório personalizado por email com as principais novidades legislativas baseado nos seus interesses.</p>
+                <div class="benefit-icon">📰</div>
+                <h3>Notícias Jurídicas Ilimitadas</h3>
+                <p>Acesso completo às notícias do STF, STJ, CNJ, TJRJ, ALERJ, OAB e outras fontes oficiais. Usuários gratuitos veem apenas as 5 últimas.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">🔔</div>
-                <h3>Alertas Personalizados</h3>
-                <p>Configure alertas para temas específicos (ICMS, ambiental, sua cidade) e receba notificações em tempo real quando algo mudar.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">📄</div>
-                <h3>PDFs Profissionais</h3>
-                <p>Baixe qualquer lei em formato PDF com layout profissional, anotações personalizadas e marca d'água do LegiRJ.</p>
+                <h3>Alertas por Email</h3>
+                <p>Configure alertas personalizados para fontes (STF, STJ, etc), áreas do direito e palavras-chave. Receba diário, semanal, mensal ou instantâneo.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">🚫</div>
                 <h3>Sem Anúncios</h3>
-                <p>Navegue de forma limpa e focada, sem nenhum tipo de anúncio. Experiência 100% dedicada à consulta legislativa.</p>
+                <p>Navegue de forma limpa e focada, sem nenhum tipo de anúncio. Experiência 100% dedicada à consulta legislativa e às notícias.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⭐</div>
+                <h3>Favoritos Ilimitados</h3>
+                <p>Salve quantas leis quiser nos seus favoritos. No plano gratuito você pode salvar até 10 leis - no Premium, sem limites.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">🔍</div>
-                <h3>Busca Avançada</h3>
-                <p>Filtros avançados, busca por termos jurídicos complexos, operadores booleanos e busca semântica com IA.</p>
+                <h3>Filtros Avançados</h3>
+                <p>Busque por fontes específicas, palavras-chave múltiplas e combine filtros de cidade, categoria e período para encontrar exatamente o que precisa.</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-icon">📈</div>
-                <h3>Histórico de Mudanças</h3>
-                <p>Veja todas as alterações que uma lei sofreu ao longo do tempo, com comparativo visual entre versões.</p>
+                <div class="benefit-icon">📬</div>
+                <h3>Newsletter Premium</h3>
+                <p>Receba semanalmente um boletim curado com análise das principais notícias e leis publicadas. Conteúdo exclusivo para assinantes.</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-icon">🤖</div>
-                <h3>API de Consulta</h3>
-                <p>Acesse nossa API para integrar dados legislativos em seus próprios sistemas e aplicações.</p>
+                <div class="benefit-icon">🔕</div>
+                <h3>Notificações Push</h3>
+                <p>Receba notificações no seu navegador assim que uma notícia importante for publicada, mesmo sem ter o site aberto.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">💬</div>
                 <h3>Suporte Prioritário</h3>
-                <p>Atendimento dedicado por email e chat, com tempo de resposta garantido em até 2 horas em dias úteis.</p>
+                <p>Atendimento por email com prioridade. Tempo de resposta médio de até 24 horas em dias úteis para assinantes Premium.</p>
             </div>
         </div>
     </div>

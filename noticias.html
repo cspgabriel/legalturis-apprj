@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Jurídicas - LegiRJ ⚖️</title>
+    <meta name="description" content="Notícias jurídicas atualizadas do STF, STJ, CNJ, TJRJ, ALERJ, OAB e principais tribunais. Receba alertas por email.">
+    <meta name="keywords" content="notícias jurídicas, STF, STJ, CNJ, TJRJ, ALERJ, OAB, jurisprudência">
+
+    <meta property="og:title" content="Notícias Jurídicas - LegiRJ">
+    <meta property="og:description" content="Acompanhe as principais notícias do mundo jurídico do RJ e do Brasil">
+    <meta property="og:type" content="website">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="premium.css">
+    <link rel="stylesheet" href="noticias.css">
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="./" class="logo-link">
+            <div class="logo-icon">⚖️</div>
+            <div class="logo-text">
+                <h1>LegiRJ</h1>
+                <span>Notícias Jurídicas</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="./" class="btn-icon" title="Início">🏠</a>
+            <a href="noticias.html" class="btn-icon" title="Notícias">📰</a>
+            <a href="premium.html" class="nav-premium-link" title="Premium">
+                <span>👑</span> Premium
+            </a>
+            <a href="account.html" class="btn-icon" title="Minha Conta">👤</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="noticias-hero">
+    <div class="container">
+        <div class="hero-badge">📰 NOTÍCIAS JURÍDICAS</div>
+        <h1>Acompanhe o mundo jurídico em tempo real</h1>
+        <p>Notícias das principais fontes oficiais: STF, STJ, CNJ, TJRJ, ALERJ, OAB e mais</p>
+        <div class="hero-fontes" id="heroFontes"></div>
+    </div>
+</section>
+
+<!-- ALERTAS CTA -->
+<section class="container">
+    <div class="alertas-cta-banner">
+        <div>
+            <h3>🔔 Receba notícias por email</h3>
+            <p>Configure alertas personalizados e seja notificado quando surgirem notícias do seu interesse</p>
+        </div>
+        <button class="btn-primary" onclick="noticias.openAlertasModal()">⚙️ Configurar Alertas</button>
+    </div>
+</section>
+
+<!-- FILTROS -->
+<main class="container">
+    <div class="filtros-noticias">
+        <div class="filtros-left">
+            <input type="text" id="searchNoticias" placeholder="🔍 Buscar notícia..." class="filter-select">
+            <select id="filtroFonte" class="filter-select">
+                <option value="">📰 Todas as Fontes</option>
+            </select>
+            <select id="filtroCategoria" class="filter-select">
+                <option value="">🎯 Todas as Categorias</option>
+            </select>
+        </div>
+        <button class="btn-secondary" id="clearFiltrosNoticias">🔄 Limpar</button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="results-info">
+        <span id="countNoticias">0 notícias</span>
+    </div>
+
+    <div class="noticias-grid" id="noticiasGrid"></div>
+
+    <div id="paginacaoNoticias" class="pagination"></div>
+
+    <!-- AD -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+             data-ad-slot="xxxxxxxx"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+</main>
+
+<!-- MODAL DE ALERTAS -->
+<div id="alertasModal" class="modal">
+    <div class="modal-overlay" onclick="noticias.closeAlertasModal()"></div>
+    <div class="modal-container">
+        <button class="modal-close" onclick="noticias.closeAlertasModal()">×</button>
+        <div class="modal-body">
+            <h2>🔔 Alertas de Notícias por Email</h2>
+            <p class="muted" style="margin-bottom: 1.5rem;">Configure quais notícias você quer receber por email</p>
+
+            <form id="formAlertas" onsubmit="noticias.salvarAlertas(event)">
+                <div class="form-group">
+                    <label>Seu email *</label>
+                    <input type="email" id="alertasEmail" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Frequência de envio</label>
+                    <select id="alertasFreq">
+                        <option value="diaria">📅 Diária (uma vez por dia)</option>
+                        <option value="semanal" selected>📆 Semanal (toda segunda)</option>
+                        <option value="mensal">🗓️ Mensal (todo dia 1)</option>
+                        <option value="instantaneo">⚡ Instantâneo (assim que publicado)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Fontes que deseja acompanhar</label>
+                    <div class="checkbox-grid" id="checkboxFontes"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Áreas do direito</label>
+                    <div class="checkbox-grid" id="checkboxCategorias"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Palavras-chave (opcional)</label>
+                    <input type="text" id="alertasKeywords" placeholder="Ex: ICMS, terceirização, home office">
+                    <small class="muted">Separe por vírgula. Só receberá notícias que contenham essas palavras.</small>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="alertasPush" checked>
+                        Também receber notificações no navegador
+                    </label>
+                </div>
+
+                <div class="alertas-resumo" id="alertasResumo"></div>
+
+                <button type="submit" class="btn-primary btn-full">
+                    💾 Salvar Configurações de Alerta
+                </button>
+
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+                    ✓ Gratuito · ✓ Cancele quando quiser · ✓ Sem spam
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- NEWSLETTER MENSAL -->
+<section class="container newsletter-section-inner">
+    <div class="newsletter-card-inner">
+        <div class="newsletter-icon-inner">📬</div>
+        <div class="newsletter-text">
+            <h3>Newsletter Mensal Gratuita</h3>
+            <p>Receba 1x por mês um resumo completo das principais leis publicadas no RJ. <strong>É grátis e sem spam.</strong></p>
+        </div>
+        <form class="newsletter-form-inner" onsubmit="event.preventDefault(); subscribeMonthly(this);">
+            <input type="email" name="email" required placeholder="seu@email.com">
+            <button type="submit" class="btn-primary">📧 Inscrever Grátis</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>⚖️ LegiRJ</h3>
+                <p>O maior portal de consulta de leis e decretos do Estado do Rio de Janeiro.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/?text=Veja%20o%20LegiRJ" target="_blank" rel="noopener" class="social-link" title="WhatsApp">📱</a>
+                    <a href="https://t.me/share/url?url=https://cspgabriel.github.io/legalturis-apprj/" target="_blank" rel="noopener" class="social-link" title="Telegram">✈️</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://cspgabriel.github.io/legalturis-apprj/" target="_blank" rel="noopener" class="social-link" title="Twitter">🐦</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://cspgabriel.github.io/legalturis-apprj/" target="_blank" rel="noopener" class="social-link" title="Facebook">📘</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Fontes Oficiais</h4>
+                <ul>
+                    <li><a href="https://portal.stf.jus.br" target="_blank" rel="noopener">STF</a></li>
+                    <li><a href="https://www.stj.jus.br" target="_blank" rel="noopener">STJ</a></li>
+                    <li><a href="https://www.cnj.jus.br" target="_blank" rel="noopener">CNJ</a></li>
+                    <li><a href="https://www.tjrj.jus.br" target="_blank" rel="noopener">TJRJ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="./">🏠 Portal Principal</a></li>
+                    <li><a href="noticias.html">📰 Notícias</a></li>
+                    <li><a href="premium.html">👑 Premium</a></li>
+                    <li><a href="account.html">👤 Minha Conta</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sobre</h4>
+                <ul>
+                    <li><a href="mailto:contato@legirj.com.br">Contato</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 LegiRJ. Todos os direitos reservados.</p>
+            <p class="disclaimer">⚠️ Portal informativo. Para informações legais oficiais, consulte sempre as fontes governamentais citadas.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="noticias-data.js"></script>
+<script src="premium.js"></script>
+<script src="noticias.js"></script>
+<script>
+    function subscribeMonthly(form) {
+        const email = form.email.value;
+        try {
+            const subs = JSON.parse(localStorage.getItem('legirj_newsletter_monthly') || '[]');
+            if (subs.includes(email)) { alert('📧 Você já está inscrito!'); return; }
+            subs.push(email);
+            localStorage.setItem('legirj_newsletter_monthly', JSON.stringify(subs));
+            alert('✅ Inscrição confirmada! Você receberá nosso resumo mensal.');
+            form.reset();
+        } catch (e) { alert('✅ Inscrição realizada!'); }
+    }
+</script>
+</body>
+</html>
