@@ -21,6 +21,8 @@ class LegiRJ {
         this.cacheElements();
         this.renderCidades();
         this.renderCategorias();
+        this.renderLeiRecentes();
+        this.renderLeisMaisVisualizadas();
         this.populateFilters();
         this.renderFooterCidades();
         this.bindEvents();
@@ -235,6 +237,56 @@ class LegiRJ {
         ).join('');
     }
 
+    renderLeiRecentes() {
+        const container = document.getElementById('leisRecentes');
+        if (!container) return;
+
+        const recentes = [...this.leis].sort((a, b) => {
+            const dateA = new Date(a.data.split('/').reverse().join('-'));
+            const dateB = new Date(b.data.split('/').reverse().join('-'));
+            return dateB - dateA;
+        }).slice(0, 6);
+
+        container.innerHTML = recentes.map(lei => this.createFeaturedCard(lei)).join('');
+        this.attachFeaturedListeners(container);
+    }
+
+    renderLeisMaisVisualizadas() {
+        const container = document.getElementById('leisMaisVisualizadas');
+        if (!container) return;
+
+        const populares = [...this.leis].sort(() => Math.random() - 0.5).slice(0, 6);
+        container.innerHTML = populares.map(lei => this.createFeaturedCard(lei)).join('');
+        this.attachFeaturedListeners(container);
+    }
+
+    createFeaturedCard(lei) {
+        const cidade = this.cidades.find(c => c.id === lei.cidade);
+        const categoria = this.categorias.find(c => c.id === lei.categoria);
+
+        return `
+            <div class="lei-card-featured" data-id="${lei.id}">
+                <div class="lei-numero">${lei.numero}</div>
+                <h3 class="lei-title">${lei.titulo}</h3>
+                <p class="lei-resumo">${lei.resumo.substring(0, 100)}...</p>
+                <div class="lei-meta">
+                    <span class="badge badge-cidade">${cidade?.icone || '🏛️'}</span>
+                    <span class="badge badge-tipo">${categoria?.icone || '📋'}</span>
+                    <span class="badge badge-ano">📅 ${lei.ano}</span>
+                </div>
+            </div>
+        `;
+    }
+
+    attachFeaturedListeners(container) {
+        container.querySelectorAll('.lei-card-featured').forEach(card => {
+            card.addEventListener('click', () => {
+                const lei = this.leis.find(l => l.id === parseInt(card.dataset.id));
+                if (lei) this.openLeiPage(lei);
+            });
+        });
+    }
+
     filterByCidade(id) {
         this.cidadeFilter.value = id;
         this.applyFilters();
@@ -392,11 +444,19 @@ class LegiRJ {
     }
 
     attachCardListeners() {
+        document.querySelectorAll('.lei-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.btn-favorite') || e.target.closest('.btn-compartilhar')) return;
+                const lei = this.leis.find(l => l.id === parseInt(card.dataset.id));
+                if (lei) this.openLeiPage(lei);
+            });
+        });
+
         document.querySelectorAll('.btn-ler').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const lei = this.leis.find(l => l.id === parseInt(btn.dataset.id));
-                if (lei) this.openModal(lei);
+                if (lei) this.openLeiPage(lei);
             });
         });
 
@@ -538,6 +598,12 @@ class LegiRJ {
     closeModal() {
         this.modal.classList.remove('show');
         document.body.style.overflow = 'auto';
+    }
+
+    openLeiPage(lei) {
+        const slug = `${lei.numero}-${lei.titulo.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim()}`;
+        const url = `leis/${slug}/`;
+        window.location.href = url;
     }
 
     /* ===== FAVORITOS ===== */
