@@ -600,9 +600,21 @@ class LegiRJ {
         document.body.style.overflow = 'auto';
     }
 
+    slugify(text) {
+        return text
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[̀-ͯ]/g, '')
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .replace(/^-+|-+$/g, '');
+    }
+
     openLeiPage(lei) {
-        const slug = `${lei.numero}-${lei.titulo.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim()}`;
-        const url = `leis/${slug}/`;
+        const slug = `${lei.numero}-${this.slugify(lei.titulo)}`;
+        const base = window.location.pathname.replace(/\/leis\/.*$/, '/').replace(/\/index\.html$/, '/');
+        const url = `${base}leis/${slug}/`;
         window.location.href = url;
     }
 
