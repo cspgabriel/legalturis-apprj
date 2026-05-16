@@ -30,6 +30,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="premium.css">
     <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
 </head>
 <body>
@@ -51,6 +52,12 @@
             </div>
         </a>
         <div class="nav-actions">
+            <a href="premium.html" class="nav-premium-link" title="Premium">
+                <span>👑</span> Premium
+            </a>
+            <a href="account.html" class="btn-icon" title="Minha Conta">
+                <span>👤</span>
+            </a>
             <button class="btn-icon" id="favoritesBtn" title="Favoritos">
                 <span>⭐</span>
                 <span class="badge-count" id="favoritesCount">0</span>
@@ -168,6 +175,23 @@
          data-full-width-responsive="true"></ins>
 </div>
 
+<!-- PREMIUM BANNER CTA -->
+<section class="container">
+    <div class="premium-banner-cta">
+        <div class="premium-banner-cta-content">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(251, 191, 36, 0.2); padding: 0.4rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem;">
+                👑 EXCLUSIVO PARA ASSINANTES
+            </div>
+            <h3>Desbloqueie o LegiRJ Premium</h3>
+            <p>Relatórios mensais, alertas personalizados, downloads em PDF, sem anúncios e muito mais.<br>
+            <strong>Teste grátis por 7 dias.</strong> Sem cartão de crédito.</p>
+            <a href="premium.html" class="btn-premium">
+                🚀 Conhecer o Premium
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- LEIS MAIS VISUALIZADAS SECTION -->
 <section class="featured-section">
     <div class="container">
@@ -176,6 +200,24 @@
             <p>As legislações com maior interesse dos usuários</p>
         </div>
         <div class="leis-carousel" id="leisMaisVisualizadas"></div>
+    </div>
+</section>
+
+<!-- NEWSLETTER SIGNUP -->
+<section class="container" style="margin: 3rem auto;">
+    <div style="background: var(--bg); border: 2px solid var(--border); border-radius: var(--radius-md); padding: 2.5rem; text-align: center; max-width: 700px; margin: 0 auto;">
+        <div style="font-size: 3rem; margin-bottom: 0.5rem;">📬</div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Receba novidades por email</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Cadastre seu email para receber atualizações sobre novas leis publicadas no RJ</p>
+        <form style="display: flex; gap: 0.5rem; flex-wrap: wrap; max-width: 500px; margin: 0 auto;" onsubmit="event.preventDefault(); premium.subscribeNewsletter(document.getElementById('newsletterEmail').value); document.getElementById('newsletterEmail').value='';">
+            <input type="email" id="newsletterEmail" required placeholder="seu@email.com" style="flex: 1; padding: 0.875rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); font-size: 1rem; min-width: 200px; background: var(--bg); color: var(--text);">
+            <button type="submit" class="btn-primary">
+                <span>📧</span> Inscrever
+            </button>
+        </form>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">
+            ✓ Newsletter semanal gratuita · ✓ Cancele quando quiser · ✓ Sem spam
+        </p>
     </div>
 </section>
 
@@ -335,6 +377,7 @@
 </footer>
 
 <script src="data.js"></script>
+<script src="premium.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

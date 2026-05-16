@@ -2,16 +2,21 @@
 // LegiRJ - Service Worker (PWA)
 // ============================================
 
-const CACHE_NAME = 'legirj-v1.0.0';
+const CACHE_NAME = 'legirj-v1.1.0';
 const RUNTIME_CACHE = 'legirj-runtime';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
   './offline.html',
+  './premium.html',
+  './account.html',
   './styles.css',
+  './premium.css',
   './app.js',
   './data.js',
+  './premium.js',
+  './account.js',
   './manifest.json',
   './icons/icon.svg',
   './icons/icon-maskable.svg',

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegiRJ Premium - Acesso Exclusivo a Recursos Avançados ⚖️</title>
+    <meta name="description" content="Assine LegiRJ Premium e tenha acesso exclusivo a relatórios, alertas personalizados, downloads em PDF e muito mais. Sem anúncios.">
+    <meta name="keywords" content="legirj premium, assinatura leis rj, relatórios jurídicos, alertas leis, premium">
+
+    <meta property="og:title" content="LegiRJ Premium - Acesso Exclusivo">
+    <meta property="og:description" content="Recursos exclusivos: relatórios mensais, alertas personalizados, downloads PDF, sem anúncios e muito mais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cspgabriel.github.io/legalturis-apprj/premium.html">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="premium.css">
+</head>
+<body>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="./" class="logo-link">
+            <div class="logo-icon">⚖️</div>
+            <div class="logo-text">
+                <h1>LegiRJ</h1>
+                <span>Portal de Leis do RJ</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="./" class="btn-icon" title="Voltar ao Portal">🏠</a>
+            <a href="account.html" class="btn-primary" id="loginBtn">
+                <span>👤</span> Minha Conta
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO PREMIUM -->
+<section class="premium-hero">
+    <div class="premium-bg-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="container">
+        <div class="premium-hero-content">
+            <div class="premium-badge-hero">
+                <span>👑</span> EXCLUSIVO PREMIUM
+            </div>
+            <h1 class="premium-title">
+                Desbloqueie o<br>
+                <span class="gradient-text-gold">poder completo</span><br>
+                da legislação fluminense
+            </h1>
+            <p class="premium-subtitle">
+                Acesso ilimitado a relatórios exclusivos, alertas personalizados,<br>
+                downloads em PDF e muito mais. Sem anúncios.
+            </p>
+            <div class="premium-stats-hero">
+                <div class="premium-stat">
+                    <div class="premium-stat-num">10K+</div>
+                    <div class="premium-stat-label">Assinantes ativos</div>
+                </div>
+                <div class="premium-stat">
+                    <div class="premium-stat-num">98%</div>
+                    <div class="premium-stat-label">Satisfação</div>
+                </div>
+                <div class="premium-stat">
+                    <div class="premium-stat-num">24/7</div>
+                    <div class="premium-stat-label">Suporte</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARATIVO -->
+<section class="features-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>🎯 O que você ganha sendo Premium</h2>
+            <p>Recursos exclusivos para profissionais e estudiosos da legislação</p>
+        </div>
+
+        <div class="comparison-table">
+            <div class="comparison-col free-col">
+                <div class="comparison-header">
+                    <h3>🆓 Gratuito</h3>
+                    <div class="comparison-price">R$ 0<small>/mês</small></div>
+                </div>
+                <ul class="comparison-features">
+                    <li>✓ Consulta a leis públicas</li>
+                    <li>✓ Busca básica</li>
+                    <li>✓ Favoritos (até 10)</li>
+                    <li>✓ Compartilhamento</li>
+                    <li class="disabled">✗ Sem anúncios</li>
+                    <li class="disabled">✗ Relatórios mensais</li>
+                    <li class="disabled">✗ Alertas personalizados</li>
+                    <li class="disabled">✗ Download em PDF</li>
+                    <li class="disabled">✗ Comparativo entre leis</li>
+                    <li class="disabled">✗ Histórico de alterações</li>
+                    <li class="disabled">✗ API de consulta</li>
+                    <li class="disabled">✗ Suporte prioritário</li>
+                </ul>
+                <a href="./" class="btn-comparison-free">Continuar Gratuito</a>
+            </div>
+
+            <div class="comparison-col premium-col featured">
+                <div class="featured-badge">MAIS POPULAR</div>
+                <div class="comparison-header">
+                    <h3>👑 Premium</h3>
+                    <div class="comparison-price">
+                        <span class="price-old">R$ 49,90</span>
+                        R$ 29<small>,90/mês</small>
+                    </div>
+                    <div class="price-savings">💰 Economia de 40% no plano anual</div>
+                </div>
+                <ul class="comparison-features">
+                    <li>✓ <strong>Tudo do gratuito</strong></li>
+                    <li>✓ <strong>Sem anúncios</strong> em toda plataforma</li>
+                    <li>✓ <strong>Relatórios mensais</strong> personalizados por email</li>
+                    <li>✓ <strong>Alertas em tempo real</strong> de novas leis</li>
+                    <li>✓ <strong>Download em PDF</strong> de qualquer lei</li>
+                    <li>✓ <strong>Comparativo</strong> entre versões de leis</li>
+                    <li>✓ <strong>Histórico de alterações</strong> legislativas</li>
+                    <li>✓ <strong>Favoritos ilimitados</strong></li>
+                    <li>✓ <strong>API de consulta</strong> programática</li>
+                    <li>✓ <strong>Suporte prioritário</strong> 24/7</li>
+                    <li>✓ <strong>Acesso antecipado</strong> a novas features</li>
+                    <li>✓ <strong>Newsletter exclusiva</strong> semanal</li>
+                </ul>
+                <button class="btn-comparison-premium" onclick="premium.subscribe('mensal')">
+                    🚀 Assinar Premium
+                </button>
+            </div>
+
+            <div class="comparison-col pro-col">
+                <div class="comparison-header">
+                    <h3>💼 Profissional</h3>
+                    <div class="comparison-price">R$ 79<small>,90/mês</small></div>
+                </div>
+                <ul class="comparison-features">
+                    <li>✓ <strong>Tudo do Premium</strong></li>
+                    <li>✓ <strong>Múltiplos usuários</strong> (até 5)</li>
+                    <li>✓ <strong>Painel admin</strong> empresarial</li>
+                    <li>✓ <strong>Relatórios White-label</strong></li>
+                    <li>✓ <strong>Integração customizada</strong></li>
+                    <li>✓ <strong>API ilimitada</strong></li>
+                    <li>✓ <strong>Treinamento</strong> da equipe</li>
+                    <li>✓ <strong>Consultor jurídico</strong> dedicado</li>
+                    <li>✓ <strong>SLA garantido</strong></li>
+                </ul>
+                <button class="btn-comparison-pro" onclick="premium.subscribe('profissional')">
+                    💼 Assinar Profissional
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFÍCIOS DETALHADOS -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>✨ Benefícios Exclusivos do Premium</h2>
+            <p>Tudo que você precisa para ficar à frente</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <h3>Relatórios Mensais</h3>
+                <p>Receba mensalmente um relatório personalizado por email com as principais novidades legislativas baseado nos seus interesses.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔔</div>
+                <h3>Alertas Personalizados</h3>
+                <p>Configure alertas para temas específicos (ICMS, ambiental, sua cidade) e receba notificações em tempo real quando algo mudar.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📄</div>
+                <h3>PDFs Profissionais</h3>
+                <p>Baixe qualquer lei em formato PDF com layout profissional, anotações personalizadas e marca d'água do LegiRJ.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🚫</div>
+                <h3>Sem Anúncios</h3>
+                <p>Navegue de forma limpa e focada, sem nenhum tipo de anúncio. Experiência 100% dedicada à consulta legislativa.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔍</div>
+                <h3>Busca Avançada</h3>
+                <p>Filtros avançados, busca por termos jurídicos complexos, operadores booleanos e busca semântica com IA.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>Histórico de Mudanças</h3>
+                <p>Veja todas as alterações que uma lei sofreu ao longo do tempo, com comparativo visual entre versões.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤖</div>
+                <h3>API de Consulta</h3>
+                <p>Acesse nossa API para integrar dados legislativos em seus próprios sistemas e aplicações.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💬</div>
+                <h3>Suporte Prioritário</h3>
+                <p>Atendimento dedicado por email e chat, com tempo de resposta garantido em até 2 horas em dias úteis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>💬 O que dizem nossos assinantes</h2>
+            <p>Profissionais que já fazem parte da comunidade Premium</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p>"Indispensável para meu escritório. Os alertas em tempo real economizam horas de pesquisa toda semana."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩‍⚖️</div>
+                    <div>
+                        <div class="testimonial-name">Dra. Marina Silva</div>
+                        <div class="testimonial-role">Advogada Tributarista</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p>"Os relatórios mensais são fantásticos. Sempre estou atualizado sobre as mudanças que afetam minha área."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨‍💼</div>
+                    <div>
+                        <div class="testimonial-name">Carlos Mendes</div>
+                        <div class="testimonial-role">Consultor Empresarial</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p>"A API é excelente. Integrei facilmente no nosso sistema interno. Vale cada centavo."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👨‍💻</div>
+                    <div>
+                        <div class="testimonial-name">Roberto Costa</div>
+                        <div class="testimonial-role">CTO - LegalTech</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>🚀 Comece agora seu período gratuito</h2>
+            <p>7 dias grátis. Cancele quando quiser. Sem compromisso.</p>
+            <form class="cta-form" id="premiumForm" onsubmit="premium.startTrial(event)">
+                <input type="email" id="trialEmail" placeholder="Seu melhor email" required>
+                <button type="submit" class="btn-cta-large">
+                    🎁 Quero meus 7 dias grátis
+                </button>
+            </form>
+            <p class="cta-note">✓ Sem cartão de crédito necessário · ✓ Acesso imediato · ✓ Cancele a qualquer momento</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>❓ Perguntas Frequentes</h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Como funciona o período gratuito?</summary>
+                <p>Você tem 7 dias para testar todos os recursos Premium sem custo. Não pedimos cartão de crédito no cadastro. Ao final do período, você decide se quer continuar.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Posso cancelar a qualquer momento?</summary>
+                <p>Sim! Você pode cancelar sua assinatura a qualquer momento através da área "Minha Conta". Não há fidelidade ou multas.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Quais formas de pagamento são aceitas?</summary>
+                <p>Aceitamos cartão de crédito (Visa, Master, Elo, Amex), PIX, boleto bancário e PayPal. Pagamentos recorrentes via cartão.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Os relatórios são personalizáveis?</summary>
+                <p>Sim! Você pode escolher temas, cidades e categorias de interesse. Os relatórios são gerados com IA e enviados mensalmente por email.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Como funcionam os alertas?</summary>
+                <p>Você configura palavras-chave, cidades e categorias. Quando uma nova lei correspondente é publicada, você recebe email e notificação push imediatamente.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Tenho desconto se pagar anual?</summary>
+                <p>Sim! No plano anual você economiza 40%, equivalente a quase 5 meses grátis. Total de R$ 215,28/ano ao invés de R$ 358,80.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL CHECKOUT -->
+<div id="checkoutModal" class="modal">
+    <div class="modal-overlay" onclick="premium.closeCheckout()"></div>
+    <div class="modal-container checkout-modal">
+        <button class="modal-close" onclick="premium.closeCheckout()">×</button>
+        <div class="checkout-body" id="checkoutBody"></div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>⚖️ LegiRJ Premium</h3>
+                <p>O acesso completo à legislação fluminense para profissionais e estudiosos.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Premium</h4>
+                <ul>
+                    <li><a href="#">Planos e Preços</a></li>
+                    <li><a href="account.html">Minha Conta</a></li>
+                    <li><a href="#">Cancelar Assinatura</a></li>
+                    <li><a href="#">Política de Reembolso</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="mailto:premium@legirj.com.br">premium@legirj.com.br</a></li>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">LGPD</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 LegiRJ Premium. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="premium.js"></script>
+</body>
+</html>

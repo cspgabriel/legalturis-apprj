@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - LegiRJ Premium ⚖️</title>
+    <meta name="description" content="Área do assinante LegiRJ Premium. Gerencie sua conta, alertas, relatórios e configurações.">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="premium.css">
+</head>
+<body>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="./" class="logo-link">
+            <div class="logo-icon">⚖️</div>
+            <div class="logo-text">
+                <h1>LegiRJ</h1>
+                <span>Minha Conta</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="./" class="btn-icon" title="Voltar">🏠</a>
+            <a href="premium.html" class="btn-primary">
+                <span>👑</span> Premium
+            </a>
+            <button class="btn-icon" id="logoutBtn" title="Sair">🚪</button>
+        </div>
+    </div>
+</nav>
+
+<!-- NOT LOGGED IN -->
+<section class="login-section" id="loginSection" style="display:none;">
+    <div class="container">
+        <div class="login-card">
+            <div class="login-icon">👤</div>
+            <h2>Entre na sua conta</h2>
+            <p>Acesse seus relatórios, alertas e configurações</p>
+            <form id="loginForm" onsubmit="account.login(event)">
+                <input type="email" id="loginEmail" placeholder="Seu email" required>
+                <input type="password" id="loginPassword" placeholder="Senha" required>
+                <button type="submit" class="btn-primary btn-full">
+                    🔓 Entrar
+                </button>
+            </form>
+            <div class="login-divider">ou</div>
+            <button class="btn-google" onclick="account.loginGoogle()">
+                <span>🌐</span> Entrar com Google
+            </button>
+            <p class="login-footer">
+                Não tem conta? <a href="premium.html">Começar grátis</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- LOGGED IN DASHBOARD -->
+<section class="account-section" id="accountSection">
+    <div class="container">
+        <!-- HEADER USER -->
+        <div class="account-header">
+            <div class="user-info">
+                <div class="user-avatar" id="userAvatar">U</div>
+                <div>
+                    <h2 id="userName">Carregando...</h2>
+                    <div class="user-status">
+                        <span class="status-badge" id="userPlan">Gratuito</span>
+                        <span id="userEmail"></span>
+                    </div>
+                </div>
+            </div>
+            <a href="premium.html" class="btn-primary" id="upgradeBtn">
+                ⬆️ Upgrade Premium
+            </a>
+        </div>
+
+        <!-- DASHBOARD TABS -->
+        <div class="dashboard-tabs">
+            <button class="dashboard-tab active" data-tab="overview">📊 Visão Geral</button>
+            <button class="dashboard-tab" data-tab="reports">📄 Relatórios</button>
+            <button class="dashboard-tab" data-tab="alerts">🔔 Alertas</button>
+            <button class="dashboard-tab" data-tab="favorites">⭐ Favoritos</button>
+            <button class="dashboard-tab" data-tab="settings">⚙️ Configurações</button>
+            <button class="dashboard-tab" data-tab="billing">💳 Pagamento</button>
+        </div>
+
+        <!-- TAB CONTENT -->
+        <div class="dashboard-content">
+            <!-- OVERVIEW -->
+            <div class="dashboard-pane active" id="pane-overview">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">📚</div>
+                        <div class="stat-card-info">
+                            <div class="stat-card-num" id="statLeisLidas">0</div>
+                            <div class="stat-card-label">Leis Lidas</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon">⭐</div>
+                        <div class="stat-card-info">
+                            <div class="stat-card-num" id="statFavoritos">0</div>
+                            <div class="stat-card-label">Favoritos</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon">🔔</div>
+                        <div class="stat-card-info">
+                            <div class="stat-card-num" id="statAlertas">0</div>
+                            <div class="stat-card-label">Alertas Ativos</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon">📄</div>
+                        <div class="stat-card-info">
+                            <div class="stat-card-num" id="statDownloads">0</div>
+                            <div class="stat-card-label">PDFs Baixados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>📰 Últimas Atualizações</h3>
+                        <div class="updates-list" id="updatesList">
+                            <p class="muted">Carregando...</p>
+                        </div>
+                    </div>
+                    <div class="overview-card premium-feature">
+                        <h3>📊 Próximo Relatório <span class="premium-tag">PREMIUM</span></h3>
+                        <p class="muted">Seu relatório mensal será enviado em <strong id="nextReport">15/06/2026</strong></p>
+                        <p class="muted">Inclui análise de todas as leis publicadas em maio.</p>
+                        <button class="btn-secondary" onclick="account.previewReport()">👁️ Visualizar Prévia</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REPORTS -->
+            <div class="dashboard-pane" id="pane-reports">
+                <div class="premium-notice" id="reportsLocked" style="display:none;">
+                    <span>🔒</span>
+                    <div>
+                        <h3>Recurso Premium</h3>
+                        <p>Relatórios personalizados estão disponíveis no plano Premium.</p>
+                    </div>
+                    <a href="premium.html" class="btn-primary">Fazer Upgrade</a>
+                </div>
+                <div id="reportsContent">
+                    <h3>📄 Seus Relatórios</h3>
+                    <p class="muted">Relatórios personalizados gerados mensalmente baseados nos seus interesses</p>
+                    <div class="reports-grid" id="reportsList"></div>
+                </div>
+            </div>
+
+            <!-- ALERTS -->
+            <div class="dashboard-pane" id="pane-alerts">
+                <div class="premium-notice" id="alertsLocked" style="display:none;">
+                    <span>🔒</span>
+                    <div>
+                        <h3>Recurso Premium</h3>
+                        <p>Alertas personalizados são exclusivos do plano Premium.</p>
+                    </div>
+                    <a href="premium.html" class="btn-primary">Fazer Upgrade</a>
+                </div>
+                <div id="alertsContent">
+                    <div class="section-header-inline">
+                        <h3>🔔 Seus Alertas</h3>
+                        <button class="btn-primary" onclick="account.newAlert()">➕ Novo Alerta</button>
+                    </div>
+                    <p class="muted">Receba notificações em tempo real quando novas leis correspondentes forem publicadas</p>
+                    <div class="alerts-list" id="alertsList"></div>
+                </div>
+            </div>
+
+            <!-- FAVORITES -->
+            <div class="dashboard-pane" id="pane-favorites">
+                <h3>⭐ Suas Leis Favoritas</h3>
+                <p class="muted">Leis que você marcou para acessar rapidamente</p>
+                <div class="favorites-list" id="favoritesListDash"></div>
+            </div>
+
+            <!-- SETTINGS -->
+            <div class="dashboard-pane" id="pane-settings">
+                <h3>⚙️ Configurações</h3>
+                <form class="settings-form" onsubmit="account.saveSettings(event)">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" id="settingsName" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="settingsEmail" placeholder="Seu email" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefone (para alertas SMS)</label>
+                        <input type="tel" id="settingsPhone" placeholder="(21) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label>Frequência de relatórios</label>
+                        <select id="settingsFreq">
+                            <option value="weekly">Semanal</option>
+                            <option value="monthly" selected>Mensal</option>
+                            <option value="quarterly">Trimestral</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="settingsNewsletter" checked>
+                            Receber newsletter exclusiva
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="settingsPush" checked>
+                            Receber notificações push
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary">💾 Salvar Configurações</button>
+                </form>
+            </div>
+
+            <!-- BILLING -->
+            <div class="dashboard-pane" id="pane-billing">
+                <h3>💳 Pagamento e Assinatura</h3>
+                <div class="billing-card">
+                    <h4>Plano Atual: <span id="billingPlan">Gratuito</span></h4>
+                    <p id="billingDate">Sem cobrança ativa</p>
+                </div>
+                <div id="billingHistory">
+                    <h4>Histórico de Pagamentos</h4>
+                    <div id="billingList">
+                        <p class="muted">Você ainda não tem histórico de pagamentos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL NEW ALERT -->
+<div id="alertModal" class="modal">
+    <div class="modal-overlay" onclick="account.closeAlertModal()"></div>
+    <div class="modal-container">
+        <button class="modal-close" onclick="account.closeAlertModal()">×</button>
+        <div class="modal-body">
+            <h2>🔔 Novo Alerta Personalizado</h2>
+            <form id="alertForm" onsubmit="account.saveAlert(event)">
+                <div class="form-group">
+                    <label>Nome do alerta</label>
+                    <input type="text" id="alertName" placeholder="Ex: Leis ambientais do RJ" required>
+                </div>
+                <div class="form-group">
+                    <label>Palavras-chave</label>
+                    <input type="text" id="alertKeywords" placeholder="ICMS, tributário, alíquota">
+                </div>
+                <div class="form-group">
+                    <label>Cidade</label>
+                    <select id="alertCity">
+                        <option value="">Todas as cidades</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <select id="alertCategory">
+                        <option value="">Todas as categorias</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Notificação por</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="alertEmail" checked> Email</label>
+                        <label><input type="checkbox" id="alertPush" checked> Push</label>
+                        <label><input type="checkbox" id="alertSms"> SMS</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary btn-full">💾 Criar Alerta</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="data.js"></script>
+<script src="premium.js"></script>
+<script src="account.js"></script>
+</body>
+</html>

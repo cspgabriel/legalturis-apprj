@@ -31,6 +31,15 @@ class LegiRJ {
         this.updateFavoritesCount();
         this.setupPWA();
         this.handleUrlParams();
+        this.applyPremiumState();
+    }
+
+    applyPremiumState() {
+        if (typeof premium !== 'undefined' && premium.isPremium()) {
+            document.querySelectorAll('.ad-banner').forEach(ad => ad.style.display = 'none');
+            const banner = document.querySelector('.premium-banner-cta');
+            if (banner) banner.parentElement.style.display = 'none';
+        }
     }
 
     /* ===== PWA INSTALL ===== */
