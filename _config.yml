@@ -1,4 +1,18 @@
-theme: jekyll-theme-minimal
-title: LegalTuris
-description: Soluções Jurídicas Inteligentes
+title: LegiRJ
+description: Portal de Leis e Decretos do Rio de Janeiro
 url: "https://cspgabriel.github.io/legalturis-apprj"
+theme: jekyll-theme-minimal
+logo:
+markdown: kramdown
+
+# Build settings
+exclude:
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

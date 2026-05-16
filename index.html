@@ -3,89 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegalTuris - Soluções Jurídicas Inteligentes</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .section {
-            margin: 2rem 0;
-            padding: 2rem;
-            background: #f5f5f5;
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>LegiRJ - Leis e Decretos do Rio de Janeiro</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>🏛️ LegalTuris</h1>
-        <p>Soluções Jurídicas Inteligentes para Seu Negócio</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>⚖️ LegiRJ</h1>
+                <p>Leis e Decretos do Rio de Janeiro</p>
+            </div>
+            <div class="header-ads">
+                <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px"
+                     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx" data-ad-slot="xxxxxxxx"></ins>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="section">
-            <h2>Bem-vindo!</h2>
-            <p>LegalTuris é uma plataforma que oferece soluções jurídicas inovadoras e inteligentes.</p>
+    <main class="container">
+        <!-- Seção de Busca e Filtros -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar lei, decreto, número...">
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Categoria:</label>
+                    <select id="categoryFilter">
+                        <option value="">Todas</option>
+                        <option value="tributaria">Tributária</option>
+                        <option value="ambiental">Ambiental</option>
+                        <option value="trabalhista">Trabalhista</option>
+                        <option value="administrativa">Administrativa</option>
+                        <option value="penal">Penal</option>
+                        <option value="civil">Civil</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="saude">Saúde</option>
+                        <option value="educacao">Educação</option>
+                        <option value="urbanismo">Urbanismo</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Tipo:</label>
+                    <select id="typeFilter">
+                        <option value="">Todos</option>
+                        <option value="lei">Lei</option>
+                        <option value="decreto">Decreto</option>
+                        <option value="resolucao">Resolução</option>
+                        <option value="portaria">Portaria</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Ano:</label>
+                    <select id="yearFilter">
+                        <option value="">Todos</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+
+                <button id="clearFilters" class="btn-clear">Limpar Filtros</button>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Nossos Serviços</h2>
-            <ul style="margin-left: 2rem;">
-                <li>Consultoria Jurídica</li>
-                <li>Documentação Legal</li>
-                <li>Análise de Contratos</li>
-                <li>Compliance</li>
-            </ul>
+        <!-- Anúncio no meio da página -->
+        <div class="middle-ads">
+            <ins class="adsbygoogle" style="display:block"
+                 data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                 data-ad-slot="xxxxxxxx"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+
+        <!-- Resultados -->
+        <section class="results-section">
+            <div id="resultsCount" class="results-count"></div>
+            <div id="resultsList" class="results-list">
+                <div class="loading">Carregando leis...</div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 LegalTuris. Todos os direitos reservados.</p>
+    <!-- Modal para detalhes -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+            <div class="modal-ads">
+                <ins class="adsbygoogle" style="display:block"
+                     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                     data-ad-slot="xxxxxxxx"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>LegiRJ © 2026 | Informações sobre Leis e Decretos do Estado do Rio de Janeiro</p>
+        <p>⚠️ Este site é informativo. Consulte fontes oficiais para informações legais precisas.</p>
     </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
