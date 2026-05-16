@@ -3,115 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegiRJ - Leis e Decretos do Rio de Janeiro</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script>
+    <meta name="description" content="O maior portal de leis e decretos do Estado do Rio de Janeiro. Consulte legislação estadual e de todas as cidades do RJ.">
+    <meta name="keywords" content="leis RJ, decretos RJ, legislação Rio de Janeiro, ALERJ, câmara municipal, leis municipais">
+    <meta property="og:title" content="LegiRJ - O Maior Portal de Leis do Rio de Janeiro">
+    <meta property="og:description" content="Consulte leis e decretos do Estado e Municípios do RJ. Mais de 40 leis catalogadas com fontes oficiais.">
+    <meta property="og:type" content="website">
+    <title>LegiRJ - Portal de Leis e Decretos do Rio de Janeiro 🏛️</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LegiRJ">
+    <meta name="application-name" content="LegiRJ">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>⚖️ LegiRJ</h1>
-                <p>Leis e Decretos do Rio de Janeiro</p>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast"></div>
+
+<!-- LOADING BAR -->
+<div class="loading-bar" id="loadingBar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo-link">
+            <div class="logo-icon">⚖️</div>
+            <div class="logo-text">
+                <h1>LegiRJ</h1>
+                <span>Portal de Leis do RJ</span>
             </div>
-            <div class="header-ads">
-                <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px"
-                     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx" data-ad-slot="xxxxxxxx"></ins>
+        </a>
+        <div class="nav-actions">
+            <button class="btn-icon" id="favoritesBtn" title="Favoritos">
+                <span>⭐</span>
+                <span class="badge-count" id="favoritesCount">0</span>
+            </button>
+            <button class="btn-icon" id="themeToggle" title="Modo escuro">
+                <span id="themeIcon">🌙</span>
+            </button>
+            <button class="btn-primary" id="installBtn" style="display:none;">
+                <span>📲</span> Instalar App
+            </button>
+            <button class="btn-primary" id="shareAppBtn">
+                <span>📤</span> Compartilhar
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+        <div class="hero-badge">🏆 O MAIOR PORTAL DE LEIS DO RJ</div>
+        <h1 class="hero-title">
+            Leis e Decretos do<br>
+            <span class="gradient-text">Rio de Janeiro</span>
+        </h1>
+        <p class="hero-subtitle">
+            Consulte legislação estadual e de todas as cidades fluminenses<br>
+            com fontes oficiais e atualizadas
+        </p>
+
+        <!-- Hero Stats -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalLeis">0</div>
+                <div class="stat-label">Leis Cadastradas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="totalCidades">0</div>
+                <div class="stat-label">Cidades</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="totalCategorias">0</div>
+                <div class="stat-label">Categorias</div>
             </div>
         </div>
-    </header>
 
-    <main class="container">
-        <!-- Seção de Busca e Filtros -->
-        <section class="search-section">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Buscar lei, decreto, número...">
+        <!-- Hero Search -->
+        <div class="hero-search">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Digite o número, título ou tema da lei...">
+                <button class="btn-search">Buscar</button>
             </div>
-
-            <div class="filters">
-                <div class="filter-group">
-                    <label>Categoria:</label>
-                    <select id="categoryFilter">
-                        <option value="">Todas</option>
-                        <option value="tributaria">Tributária</option>
-                        <option value="ambiental">Ambiental</option>
-                        <option value="trabalhista">Trabalhista</option>
-                        <option value="administrativa">Administrativa</option>
-                        <option value="penal">Penal</option>
-                        <option value="civil">Civil</option>
-                        <option value="comercial">Comercial</option>
-                        <option value="saude">Saúde</option>
-                        <option value="educacao">Educação</option>
-                        <option value="urbanismo">Urbanismo</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label>Tipo:</label>
-                    <select id="typeFilter">
-                        <option value="">Todos</option>
-                        <option value="lei">Lei</option>
-                        <option value="decreto">Decreto</option>
-                        <option value="resolucao">Resolução</option>
-                        <option value="portaria">Portaria</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label>Ano:</label>
-                    <select id="yearFilter">
-                        <option value="">Todos</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                    </select>
-                </div>
-
-                <button id="clearFilters" class="btn-clear">Limpar Filtros</button>
-            </div>
-        </section>
-
-        <!-- Anúncio no meio da página -->
-        <div class="middle-ads">
-            <ins class="adsbygoogle" style="display:block"
-                 data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
-                 data-ad-slot="xxxxxxxx"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-        </div>
-
-        <!-- Resultados -->
-        <section class="results-section">
-            <div id="resultsCount" class="results-count"></div>
-            <div id="resultsList" class="results-list">
-                <div class="loading">Carregando leis...</div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Modal para detalhes -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalBody"></div>
-            <div class="modal-ads">
-                <ins class="adsbygoogle" style="display:block"
-                     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
-                     data-ad-slot="xxxxxxxx"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
+            <div class="search-tags">
+                <span>Buscas populares:</span>
+                <button class="tag" data-search="ICMS">ICMS</button>
+                <button class="tag" data-search="ambiental">Ambiental</button>
+                <button class="tag" data-search="habitação">Habitação</button>
+                <button class="tag" data-search="saúde">Saúde</button>
+                <button class="tag" data-search="petropolis">Petrópolis</button>
             </div>
         </div>
     </div>
+</section>
 
-    <footer class="footer">
-        <p>LegiRJ © 2026 | Informações sobre Leis e Decretos do Estado do Rio de Janeiro</p>
-        <p>⚠️ Este site é informativo. Consulte fontes oficiais para informações legais precisas.</p>
-    </footer>
+<!-- AD BANNER -->
+<div class="ad-banner container">
+    <ins class="adsbygoogle" style="display:block"
+         data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+         data-ad-slot="xxxxxxxx"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
 
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+<!-- CIDADES SECTION -->
+<section class="cidades-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>📍 Explore por Cidade</h2>
+            <p>Encontre leis específicas do seu município</p>
+        </div>
+        <div class="cidades-grid" id="cidadesGrid"></div>
+    </div>
+</section>
+
+<!-- CATEGORIAS SECTION -->
+<section class="categorias-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>🎯 Filtre por Categoria</h2>
+            <p>Selecione áreas do direito de seu interesse</p>
+        </div>
+        <div class="categorias-grid" id="categoriasGrid"></div>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main-content container">
+    <!-- Filtros Avançados -->
+    <div class="filtros-bar">
+        <div class="filtros-left">
+            <select id="cidadeFilter" class="filter-select">
+                <option value="">🌍 Todas as Cidades</option>
+            </select>
+            <select id="categoryFilter" class="filter-select">
+                <option value="">🎯 Todas as Categorias</option>
+            </select>
+            <select id="typeFilter" class="filter-select">
+                <option value="">📄 Todos os Tipos</option>
+                <option value="lei">Lei</option>
+                <option value="decreto">Decreto</option>
+                <option value="resolucao">Resolução</option>
+                <option value="portaria">Portaria</option>
+            </select>
+            <select id="yearFilter" class="filter-select">
+                <option value="">📅 Todos os Anos</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+            </select>
+        </div>
+        <div class="filtros-right">
+            <button class="btn-secondary" id="clearFilters">
+                <span>🔄</span> Limpar
+            </button>
+            <select id="sortBy" class="filter-select">
+                <option value="recent">📅 Mais Recentes</option>
+                <option value="oldest">⏳ Mais Antigas</option>
+                <option value="title">🔤 Título A-Z</option>
+                <option value="number">🔢 Número</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Resultados Info -->
+    <div class="results-info">
+        <div class="results-count">
+            <span id="resultsCount">0 leis</span> encontradas
+        </div>
+        <div class="view-toggle">
+            <button class="view-btn active" data-view="grid" title="Grade">⊞</button>
+            <button class="view-btn" data-view="list" title="Lista">≡</button>
+        </div>
+    </div>
+
+    <!-- Lista de Leis -->
+    <div id="resultsList" class="leis-grid"></div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination"></div>
+
+    <!-- AD between results -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+             data-ad-slot="xxxxxxxx"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+</main>
+
+<!-- MODAL DE DETALHES -->
+<div id="modal" class="modal">
+    <div class="modal-overlay" onclick="app.closeModal()"></div>
+    <div class="modal-container">
+        <div class="modal-header">
+            <button class="modal-close" onclick="app.closeModal()">×</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>⚖️ LegiRJ</h3>
+                <p>O maior portal de consulta de leis e decretos do Estado do Rio de Janeiro.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" onclick="app.shareApp('whatsapp')" title="WhatsApp">📱</a>
+                    <a href="#" class="social-link" onclick="app.shareApp('telegram')" title="Telegram">✈️</a>
+                    <a href="#" class="social-link" onclick="app.shareApp('twitter')" title="Twitter">🐦</a>
+                    <a href="#" class="social-link" onclick="app.shareApp('facebook')" title="Facebook">📘</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Fontes Oficiais</h4>
+                <ul>
+                    <li><a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">ALERJ</a></li>
+                    <li><a href="https://www.ioerj.com.br" target="_blank" rel="noopener">Diário Oficial RJ</a></li>
+                    <li><a href="https://www.camara.rio" target="_blank" rel="noopener">Câmara do Rio</a></li>
+                    <li><a href="https://www.rj.gov.br" target="_blank" rel="noopener">Governo do RJ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Cidades</h4>
+                <ul id="footerCidades"></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sobre</h4>
+                <ul>
+                    <li><a href="#about">Quem Somos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#privacy">Privacidade</a></li>
+                    <li><a href="#terms">Termos de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 LegiRJ. Todos os direitos reservados.</p>
+            <p class="disclaimer">⚠️ Portal informativo. Para informações legais oficiais, consulte sempre as fontes governamentais citadas.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
