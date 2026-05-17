@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "total": 40,
+  "total": 55,
   "leis": [
     {
       "id": 1,
@@ -441,6 +441,171 @@
       "cidade": "estado",
       "ano": 2024,
       "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.310-programa-de-refinanciamento-de-dividas-tributarias-refis-rj-2024/"
+    },
+    {
+      "id": 41,
+      "numero": "LC-224",
+      "tipo": "Lei Complementar",
+      "titulo": "Nova Lei Orgânica da Polícia Civil do Estado do Rio de Janeiro",
+      "resumo": "Reforma a estrutura de cargos, carreira e benefícios da Polícia Civil do RJ, unificando funções e instituindo auxílio-saúde, adicional noturno e novas regras de promoção.",
+      "categoria": "seguranca",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/lc-224-nova-lei-organica-da-policia-civil-do-estado-do-rio-de-janeiro/"
+    },
+    {
+      "id": 42,
+      "numero": "7.820",
+      "tipo": "Lei",
+      "titulo": "Programa de Assistência Integral às Mulheres Vítimas de Violência Sexual",
+      "resumo": "Institui o Programa de Assistência Integral às Mulheres Vítimas de Estupro no Município do Rio de Janeiro, com suporte psicológico, médico e jurídico.",
+      "categoria": "civil",
+      "cidade": "rio",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.820-programa-de-assistencia-integral-as-mulheres-vitimas-de-violencia-sexual/"
+    },
+    {
+      "id": 43,
+      "numero": "7.835",
+      "tipo": "Lei",
+      "titulo": "Programa Recicla Rio - Gestão de Resíduos no Carnaval e Eventos de Massa",
+      "resumo": "Cria o Programa Recicla Rio, com coleta seletiva e destinação adequada de resíduos gerados durante o Carnaval e grandes eventos na cidade.",
+      "categoria": "ambiental",
+      "cidade": "rio",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.835-programa-recicla-rio-gestao-de-residuos-no-carnaval-e-eventos-de-massa/"
+    },
+    {
+      "id": 44,
+      "numero": "7.840",
+      "tipo": "Lei",
+      "titulo": "Prioridade de Vagas em Creches para Filhos de Mulheres em Situação de Violência Doméstica",
+      "resumo": "Garante prioridade de matrícula ou transferência em creches e escolas da rede municipal para mulheres vítimas de violência doméstica e seus dependentes.",
+      "categoria": "educacao",
+      "cidade": "rio",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.840-prioridade-de-vagas-em-creches-para-filhos-de-mulheres-em-situacao-de-violencia-domestica/"
+    },
+    {
+      "id": 45,
+      "numero": "9.380",
+      "tipo": "Lei",
+      "titulo": "Ampliação do Passe Livre Intermunicipal para Estudantes de Áreas Afastadas",
+      "resumo": "Amplia o benefício do Passe Livre Intermunicipal para estudantes que necessitam de mais de um modal de transporte para chegar à escola em municípios do interior do RJ.",
+      "categoria": "transporte",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.380-ampliacao-do-passe-livre-intermunicipal-para-estudantes-de-areas-afastadas/"
+    },
+    {
+      "id": 46,
+      "numero": "9.350",
+      "tipo": "Lei",
+      "titulo": "Regulamentação de Veículos de Micromobilidade Elétrica no Estado do Rio de Janeiro",
+      "resumo": "Estabelece normas de circulação, segurança e registro para ciclomotores elétricos, motonetas elétricas, patinetes e bicicletas elétricas no Estado do Rio de Janeiro.",
+      "categoria": "transporte",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.350-regulamentacao-de-veiculos-de-micromobilidade-eletrica-no-estado-do-rio-de-janeiro/"
+    },
+    {
+      "id": 47,
+      "numero": "9.400",
+      "tipo": "Lei",
+      "titulo": "Marco Estadual de Inteligência Artificial e Inovação Digital do Rio de Janeiro",
+      "resumo": "Estabelece diretrizes para o uso ético, seguro e responsável de sistemas de inteligência artificial pela administração pública estadual e regula incentivos para empresas de IA.",
+      "categoria": "administrativa",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.400-marco-estadual-de-inteligencia-artificial-e-inovacao-digital-do-rio-de-janeiro/"
+    },
+    {
+      "id": 48,
+      "numero": "3.650",
+      "tipo": "Lei",
+      "titulo": "Plano de Mobilidade Urbana Sustentável de Niterói 2025-2035",
+      "resumo": "Institui o Plano de Mobilidade Urbana Sustentável de Niterói, com diretrizes para ciclovias, transporte aquaviário, integração modal e redução de emissões.",
+      "categoria": "urbanismo",
+      "cidade": "niteroi",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.650-plano-de-mobilidade-urbana-sustentavel-de-niteroi-2025-2035/"
+    },
+    {
+      "id": 49,
+      "numero": "3.390",
+      "tipo": "Lei",
+      "titulo": "Programa Caxias Saudável - Expansão da Atenção Primária à Saúde",
+      "resumo": "Cria o Programa Caxias Saudável, com metas de expansão das Unidades Básicas de Saúde, ampliação do ESF e modernização da rede de saúde municipal.",
+      "categoria": "saude",
+      "cidade": "duque-caxias",
+      "ano": 2024,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/3.390-programa-caxias-saudavel-expansao-da-atencao-primaria-a-saude/"
+    },
+    {
+      "id": 50,
+      "numero": "9.360",
+      "tipo": "Lei",
+      "titulo": "Programa Estadual de Saúde Mental e Atenção Psicossocial do Rio de Janeiro",
+      "resumo": "Institui o Programa Estadual de Saúde Mental, com expansão da Rede de Atenção Psicossocial, CAPS 24h e programa de saúde mental nas escolas.",
+      "categoria": "saude",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.360-programa-estadual-de-saude-mental-e-atencao-psicossocial-do-rio-de-janeiro/"
+    },
+    {
+      "id": 51,
+      "numero": "7.860",
+      "tipo": "Lei",
+      "titulo": "Plataforma Digital de Proteção à Mulher Carioca",
+      "resumo": "Cria plataforma digital integrada de apoio e proteção a mulheres vítimas de violência doméstica no Município do Rio de Janeiro.",
+      "categoria": "seguranca",
+      "cidade": "rio",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/7.860-plataforma-digital-de-protecao-a-mulher-carioca/"
+    },
+    {
+      "id": 52,
+      "numero": "1.780",
+      "tipo": "Lei",
+      "titulo": "Programa de Regularização e Fomento ao Comércio Popular de São Gonçalo",
+      "resumo": "Regulamenta o comércio ambulante e popular em São Gonçalo, com cadastro municipal, zoneamento, capacitação e acesso a crédito para pequenos comerciantes.",
+      "categoria": "comercial",
+      "cidade": "sao-goncalo",
+      "ano": 2024,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/1.780-programa-de-regularizacao-e-fomento-ao-comercio-popular-de-sao-goncalo/"
+    },
+    {
+      "id": 53,
+      "numero": "9.210",
+      "tipo": "Lei",
+      "titulo": "Fundo Municipal de Desenvolvimento de Campos dos Goytacazes",
+      "resumo": "Cria o Fundo Municipal de Desenvolvimento de Campos, vinculado aos royalties do petróleo, com destinação obrigatória para infraestrutura, educação e saúde.",
+      "categoria": "administrativa",
+      "cidade": "campos",
+      "ano": 2024,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.210-fundo-municipal-de-desenvolvimento-de-campos-dos-goytacazes/"
+    },
+    {
+      "id": 54,
+      "numero": "9.420",
+      "tipo": "Lei",
+      "titulo": "Programa Estadual Morar Bem RJ - Habitação de Interesse Social",
+      "resumo": "Cria o Programa Morar Bem RJ, voltado à construção de habitações populares, regularização fundiária e urbanização de assentamentos precários no Estado do Rio de Janeiro.",
+      "categoria": "habitacao",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.420-programa-estadual-morar-bem-rj-habitacao-de-interesse-social/"
+    },
+    {
+      "id": 55,
+      "numero": "9.390",
+      "tipo": "Lei",
+      "titulo": "Regulamentação do Trabalho por Plataformas Digitais no Estado do Rio de Janeiro",
+      "resumo": "Estabelece direitos e garantias aos trabalhadores de aplicativos de transporte, delivery e serviços no Estado do Rio de Janeiro, incluindo piso mínimo, seguro e benefícios.",
+      "categoria": "trabalhista",
+      "cidade": "estado",
+      "ano": 2025,
+      "url": "https://cspgabriel.github.io/legalturis-apprj/leis/9.390-regulamentacao-do-trabalho-por-plataformas-digitais-no-estado-do-rio-de-janeiro/"
     }
   ]
 }
