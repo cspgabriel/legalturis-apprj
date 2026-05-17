@@ -705,7 +705,7 @@ class LegiRJ {
 
     shareApp(platform) {
         const url = window.location.href;
-        const text = '⚖️ LegiRJ - O maior portal de Leis e Decretos do RJ! Mais de 40 leis catalogadas com fontes oficiais.';
+        const text = '⚖️ LegiRJ - O maior portal de Leis e Decretos do RJ! Mais de 55 leis catalogadas com fontes oficiais.';
 
         const links = {
             whatsapp: `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`,
