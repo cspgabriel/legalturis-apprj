@@ -63,9 +63,8 @@
     <link rel="icon" type="image/svg+xml" href="../../icons/icon.svg">
     <link rel="stylesheet" href="../../styles.css">
 
-        <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5022702507036641"
-         crossorigin="anonymous"></script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -74,12 +73,80 @@
                 <div class="logo-icon">⚖️</div>
                 <div class="logo-text">
                     <h1>LegiRJ</h1>
-                    <span>Portal de Leis</span>
+                    <span>Portal de Leis do RJ</span>
                 </div>
             </a>
-            <div class="nav-actions">
-                <button class="btn-icon" onclick="window.history.back()" title="Voltar">←</button>
-                <a href="../../" class="btn-primary">🏠 Início</a>
+
+            <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-menu-main').classList.toggle('mobile-open')">☰</button>
+
+            <ul class="nav-menu-main">
+                <li class="nav-menu-item"><a href="../../" class="nav-menu-link">🏠 Início</a></li>
+
+                <li class="nav-menu-item">
+                    <button class="nav-menu-link has-arrow">📍 Cidades</button>
+                    <ul class="nav-submenu wide">
+                        <li class="submenu-header">Capital e Região Metropolitana</li>
+                        <li><a href="../../cidades/rio/"><span class="submenu-icon">🌆</span> Rio de Janeiro</a></li>
+                        <li><a href="../../cidades/niteroi/"><span class="submenu-icon">🌉</span> Niterói</a></li>
+                        <li><a href="../../cidades/sao-goncalo/"><span class="submenu-icon">🏙️</span> São Gonçalo</a></li>
+                        <li><a href="../../cidades/duque-caxias/"><span class="submenu-icon">🏘️</span> Duque de Caxias</a></li>
+                        <li><a href="../../cidades/nova-iguacu/"><span class="submenu-icon">🏛️</span> Nova Iguaçu</a></li>
+                        <li><a href="../../cidades/belford-roxo/"><span class="submenu-icon">🏘️</span> Belford Roxo</a></li>
+                        <li class="submenu-header">Interior</li>
+                        <li><a href="../../cidades/petropolis/"><span class="submenu-icon">⛰️</span> Petrópolis</a></li>
+                        <li><a href="../../cidades/campos/"><span class="submenu-icon">🌾</span> Campos</a></li>
+                        <li><a href="../../cidades/volta-redonda/"><span class="submenu-icon">🏭</span> Volta Redonda</a></li>
+                        <li><a href="../../cidades/macae/"><span class="submenu-icon">🛢️</span> Macaé</a></li>
+                        <li><a href="../../cidades/marica/"><span class="submenu-icon">🏖️</span> Maricá</a></li>
+                        <li><a href="../../cidades/cabo-frio/"><span class="submenu-icon">🏖️</span> Cabo Frio</a></li>
+                        <li><a href="../../cidades/" style="grid-column: 1 / -1; text-align: center; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border);"><strong>Ver todas as 20 cidades →</strong></a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <button class="nav-menu-link has-arrow">🎯 Categorias</button>
+                    <ul class="nav-submenu wide">
+                        <li><a href="../../categorias/tributaria/"><span class="submenu-icon">💰</span> Tributária</a></li>
+                        <li><a href="../../categorias/trabalhista/"><span class="submenu-icon">👷</span> Trabalhista</a></li>
+                        <li><a href="../../categorias/ambiental/"><span class="submenu-icon">🌳</span> Ambiental</a></li>
+                        <li><a href="../../categorias/saude/"><span class="submenu-icon">🏥</span> Saúde</a></li>
+                        <li><a href="../../categorias/educacao/"><span class="submenu-icon">🎓</span> Educação</a></li>
+                        <li><a href="../../categorias/urbanismo/"><span class="submenu-icon">🏗️</span> Urbanismo</a></li>
+                        <li><a href="../../categorias/transporte/"><span class="submenu-icon">🚌</span> Transporte</a></li>
+                        <li><a href="../../categorias/habitacao/"><span class="submenu-icon">🏠</span> Habitação</a></li>
+                        <li><a href="../../categorias/turismo/"><span class="submenu-icon">🗺️</span> Turismo</a></li>
+                        <li><a href="../../categorias/cultura/"><span class="submenu-icon">🎭</span> Cultura</a></li>
+                        <li><a href="../../categorias/seguranca/"><span class="submenu-icon">🚓</span> Segurança</a></li>
+                        <li><a href="../../categorias/administrativa/"><span class="submenu-icon">📋</span> Administrativa</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item">
+                    <button class="nav-menu-link has-arrow">💼 Setores</button>
+                    <ul class="nav-submenu">
+                        <li><a href="../../setores/advocacia/"><span class="submenu-icon">👨‍⚖️</span> Advocacia e Direito</a></li>
+                        <li><a href="../../setores/saude/"><span class="submenu-icon">🏥</span> Profissionais de Saúde</a></li>
+                        <li><a href="../../setores/empresarial/"><span class="submenu-icon">💼</span> Setor Empresarial</a></li>
+                        <li><a href="../../setores/construcao/"><span class="submenu-icon">🏗️</span> Construção e Imóveis</a></li>
+                        <li><a href="../../setores/educacao/"><span class="submenu-icon">🎓</span> Educação e Ensino</a></li>
+                        <li><a href="../../setores/transporte-log/"><span class="submenu-icon">🚚</span> Transporte e Logística</a></li>
+                        <li><a href="../../setores/publico/"><span class="submenu-icon">👔</span> Servidor Público</a></li>
+                        <li><a href="../../setores/ambiental/"><span class="submenu-icon">🌳</span> Sustentabilidade</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-menu-item"><a href="../../noticias.html" class="nav-menu-link">📰 Notícias</a></li>
+                <li class="nav-menu-item"><a href="../../premium.html" class="nav-premium-link">👑 Premium</a></li>
+                <li class="nav-menu-item"><a href="../../account.html" class="nav-menu-link">👤 Conta</a></li>
+            </ul>
+
+            <div class="nav-actions" style="display: flex; gap: 0.5rem;">
+                <button class="btn-icon" title="Favoritos" onclick="window.location.href='../../?action=favorites'">
+                    <span>⭐</span>
+                </button>
+                <button class="btn-icon" title="Modo escuro" onclick="toggleTheme()">
+                    <span id="themeIcon">🌙</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -291,6 +358,24 @@
     </style>
 
     <script>
+        // Theme toggle
+        function toggleTheme() {
+            const theme = localStorage.getItem('theme') || 'light';
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            document.documentElement.setAttribute('data-theme', newTheme);
+            const icon = document.getElementById('themeIcon');
+            if (icon) icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Apply theme on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            const icon = document.getElementById('themeIcon');
+            if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        });
+
         // Mock app object for single page
         window.app = {
             shareLei: (lei) => {
