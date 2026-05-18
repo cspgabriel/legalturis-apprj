@@ -1,0 +1,77 @@
+name: Refresh banco de leis
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"   # toda segunda às 04h UTC (01h BRT)
+  workflow_dispatch:
+    inputs:
+      max_records:
+        description: "Máximo de registros do LexML"
+        default: "5000"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run LexML scraper
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+        run: |
+          python -m scripts.scrapers.lexml --max ${{ github.event.inputs.max_records || '5000' }}
+
+      - name: Run ALERJ scraper (best effort)
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+        continue-on-error: true
+        run: |
+          python -m scripts.scrapers.alerj --ano-inicio 2010 --ano-fim 2026
+
+      - name: Run Câmara Rio scraper (best effort)
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+        continue-on-error: true
+        run: |
+          python -m scripts.scrapers.camara_rio --ano-inicio 2010 --ano-fim 2026
+
+      - name: Re-seed from curated 40 leis
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+        run: python -m scripts.pipeline.seed_from_existing
+
+      - name: Build JSON database
+        env:
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+        run: python -m scripts.pipeline.build_db --chunk 500
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw api/leis-bulk
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+          else
+            git commit -m "data: refresh automático $(date -u +%Y-%m-%d)"
+            git push
+          fi

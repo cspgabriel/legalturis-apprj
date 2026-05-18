@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Lei — LegalTuris RJ</title>
+  <meta name="description" id="meta-desc" content="Norma jurídica do Rio de Janeiro." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // JSON-LD dinâmico será injetado em runtime
+  </script>
+  <style>
+    .lei-detail{max-width:860px;margin:0 auto;padding:2rem 1rem;}
+    .lei-detail .badge{display:inline-block;padding:.25rem .6rem;border-radius:6px;background:#eef;color:#225;font-size:.85rem;margin-right:.3rem}
+    .lei-detail .meta{color:#555;margin-bottom:1rem;font-size:.95rem}
+    .lei-detail .resumo{font-size:1.05rem;line-height:1.55;margin:1.5rem 0;padding:1rem 1.2rem;border-left:4px solid #4a76d8;background:#f6f8ff}
+    .lei-detail .actions a{display:inline-block;margin-right:.6rem;padding:.55rem 1rem;border-radius:6px;text-decoration:none;background:#4a76d8;color:white;font-weight:600}
+    .lei-detail .actions a.secondary{background:#eee;color:#222}
+    .lei-detail .ofi{margin-top:1.5rem;font-size:.9rem;color:#666}
+    .skeleton{height:1em;background:linear-gradient(90deg,#eee,#f6f6f6,#eee);background-size:200% 100%;animation:sk 1.2s linear infinite;border-radius:4px;margin:.4em 0}
+    @keyframes sk{0%{background-position:0% 0}100%{background-position:-200% 0}}
+    #not-found{text-align:center;padding:3rem 1rem}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">⚖️ LegalTuris RJ</a>
+    <nav><a href="index.html">Início</a> · <a href="buscar.html">Buscar</a> · <a href="noticias.html">Notícias</a></nav>
+  </header>
+
+  <main>
+    <article class="lei-detail" id="lei-content">
+      <div class="skeleton" style="width:60%;height:1.6em"></div>
+      <div class="skeleton" style="width:40%"></div>
+      <div class="skeleton" style="width:90%;height:5em;margin-top:1.5rem"></div>
+    </article>
+
+    <section id="not-found" hidden>
+      <h1>Lei não encontrada</h1>
+      <p>Esse documento pode ter sido removido ou o link está incorreto.</p>
+      <p><a href="buscar.html">↪︎ Buscar no acervo completo</a></p>
+    </section>
+  </main>
+
+  <script src="db-client.js"></script>
+  <script>
+    (async () => {
+      const params = new URLSearchParams(location.search);
+      const id = params.get("id");
+      const numero = params.get("numero");
+      const ano = params.get("ano");
+      const container = document.getElementById("lei-content");
+      const notFound = document.getElementById("not-found");
+
+      const db = new LeiDB();
+      try { await db.init(); } catch (e) {
+        container.innerHTML = `<p style="color:#c00">Não foi possível carregar a base de leis. Tente novamente.</p>`;
+        return;
+      }
+
+      let lei = null;
+      if (id) {
+        lei = await db.get(id);
+      } else if (numero) {
+        const r = await db.search({ termo: numero, ano: ano || undefined, pageSize: 1 });
+        lei = r.leis[0] || null;
+      }
+
+      if (!lei) {
+        container.hidden = true;
+        notFound.hidden = false;
+        return;
+      }
+
+      // Atualiza metadados
+      const tituloFinal = `${lei.tipo} nº ${lei.numero}/${lei.ano} — ${lei.titulo}`.slice(0, 180);
+      document.title = `${tituloFinal} | LegalTuris RJ`;
+      document.getElementById("page-title").textContent = document.title;
+      document.getElementById("meta-desc").setAttribute("content", lei.resumo || tituloFinal);
+
+      // JSON-LD
+      const ld = {
+        "@context": "https://schema.org",
+        "@type": "Legislation",
+        "name": tituloFinal,
+        "description": lei.resumo || tituloFinal,
+        "legislationIdentifier": lei.numero,
+        "legislationType": lei.tipo,
+        "legislationDate": lei.data_publicacao || `${lei.ano}-01-01`,
+        "legislationJurisdiction": lei.cidade,
+        "url": location.href,
+        "sameAs": lei.url_oficial || undefined,
+      };
+      const s = document.createElement("script");
+      s.type = "application/ld+json";
+      s.textContent = JSON.stringify(ld);
+      document.head.appendChild(s);
+
+      // Render
+      const oficial = lei.url_oficial
+        ? `<div class="ofi">Fonte oficial: <a href="${lei.url_oficial}" target="_blank" rel="noopener">${new URL(lei.url_oficial).hostname}</a> · indexado via ${lei.fonte}</div>`
+        : `<div class="ofi">Fonte: ${lei.fonte}</div>`;
+
+      const textoFull = (lei.texto_integral || "").trim();
+      const corpo = textoFull
+        ? `<details><summary>Ver texto integral (${textoFull.length.toLocaleString("pt-BR")} caracteres)</summary><pre style="white-space:pre-wrap;font-family:inherit;font-size:.95rem;line-height:1.5">${escapeHtml(textoFull)}</pre></details>`
+        : `<p style="color:#888">Texto integral não indexado. Consulte na <a href="${lei.url_oficial || 'https://www.lexml.gov.br'}" target="_blank">fonte oficial</a>.</p>`;
+
+      container.innerHTML = `
+        <div>
+          <span class="badge">${escapeHtml(lei.tipo)}</span>
+          <span class="badge">${escapeHtml(lei.cidade)}</span>
+          <span class="badge">${escapeHtml(lei.categoria)}</span>
+        </div>
+        <h1>${escapeHtml(lei.tipo)} nº ${escapeHtml(lei.numero)}/${lei.ano}</h1>
+        <div class="meta">${escapeHtml(lei.titulo)}</div>
+        ${lei.resumo ? `<div class="resumo">${escapeHtml(lei.resumo)}</div>` : ""}
+        <div class="actions">
+          ${lei.url_oficial ? `<a href="${lei.url_oficial}" target="_blank" rel="noopener">📄 Texto oficial</a>` : ""}
+          <a class="secondary" href="buscar.html?cidade=${encodeURIComponent(lei.cidade)}">Outras de ${escapeHtml(lei.cidade)}</a>
+          <a class="secondary" href="buscar.html?categoria=${encodeURIComponent(lei.categoria)}">Categoria: ${escapeHtml(lei.categoria)}</a>
+        </div>
+        ${corpo}
+        ${oficial}
+      `;
+
+      function escapeHtml(str){
+        return String(str||"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+      }
+    })();
+  </script>
+</body>
+</html>

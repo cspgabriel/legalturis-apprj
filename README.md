@@ -1,4 +1,40 @@
-# LegiRJ - Portal de Leis e Decretos do Rio de Janeiro
+# LegalTuris RJ — Portal de Leis e Decretos do Rio de Janeiro
+
+> **Status v2.0**: Banco JSON chunked com 286+ normas indexadas (LexML + curadoria),
+> busca client-side com filtros e paginação, página de detalhe dinâmica.
+> Pipeline de scraping Python documentado em [`docs/SCRAPERS.md`](docs/SCRAPERS.md).
+
+## 🔥 O que tem aqui
+
+- **Site estático** (`index.html`, `buscar.html`, `lei.html?id=X`) — sem backend
+- **Banco JSON chunked** em `api/leis-bulk/` — escala até ~50k leis sem migração
+- **Cliente JS** (`db-client.js`) — fetch sob demanda, índice invertido, paginação
+- **Scrapers Python** (`scripts/scrapers/`) — LexML (funciona), ALERJ + CMRJ (rede-dependente)
+- **Pipeline de build** (`scripts/pipeline/`) — consolida CSVs → JSON chunked
+- **GitHub Actions** (`.github/workflows/refresh-leis.yml`) — refresh semanal automático
+
+## 📚 Documentação
+
+| Doc | Assunto |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Stack, camadas, roteamento, cache |
+| [`docs/DATABASE.md`](docs/DATABASE.md) | Schema, formatos JSON, cliente JS |
+| [`docs/SCRAPERS.md`](docs/SCRAPERS.md) | Como funciona cada fonte, limitações, como adicionar nova |
+
+## 🚀 Quick start
+
+```bash
+# Servir site local
+python -m http.server 8000
+
+# Popular banco (LexML — funciona em qualquer rede)
+pip install -r scripts/requirements.txt
+PYTHONUTF8=1 python -m scripts.scrapers.lexml --max 5000
+PYTHONUTF8=1 python -m scripts.pipeline.seed_from_existing
+PYTHONUTF8=1 python -m scripts.pipeline.build_db
+```
+
+---
 
 ## 📋 Descrição
 

@@ -450,6 +450,156 @@ const LEIS_RJ = [
         autor: "Secretaria Estadual de Fazenda",
         conteudo: `<p>A Lei nº 9.310/2024 institui o Programa de Refinanciamento de Dívidas Tributárias do Estado do Rio de Janeiro - REFIS-RJ 2024, oferecendo aos contribuintes a oportunidade de regularizar débitos vencidos com a Fazenda Estadual com condições especiais. O programa abrange débitos de ICMS, IPVA, ITD (Imposto sobre Transmissão por Causa de Morte e Doação), Taxas Estaduais e contribuições.</p>
         <p>São oferecidas as seguintes condições: pagamento à vista com desconto de até 90% em multas e juros; parcelamento em até 60 parcelas mensais com desconto de até 70%; parcelamento em até 120 parcelas com desconto de até 50%. A adesão é facultativa e exige a desistência de eventuais ações judiciais e administrativas que questionem os débitos. O período de adesão é de 6 meses a partir da regulamentação, prorrogável uma única vez por mais 3 meses. Espera-se arrecadar mais de R$ 2 bilhões e regularizar 50 mil contribuintes inadimplentes.</p>`
+    },
+    {
+        id: 41, numero: "LC-224", tipo: "Lei Complementar", cidade: "estado", categoria: "seguranca", ano: 2025, data: "15/01/2025",
+        titulo: "Nova Lei Orgânica da Polícia Civil do Estado do Rio de Janeiro",
+        resumo: "Reforma a estrutura de cargos, carreira e benefícios da Polícia Civil do RJ, unificando funções e instituindo auxílio-saúde, adicional noturno e novas regras de promoção.",
+        fonte: "ALERJ - Lei Complementar nº 224/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Governo do Estado do Rio de Janeiro",
+        conteudo: `<p>A Lei Complementar nº 224/2025 promove uma reforma abrangente na Lei Orgânica da Polícia Civil do Estado do Rio de Janeiro (LC 204/22), com o objetivo de modernizar a estrutura organizacional da corporação, valorizar os profissionais da segurança pública e adequar as carreiras às exigências contemporâneas. O texto ratifica a unificação dos cargos de Inspetor de Polícia, Oficial de Cartório Policial e Investigador Policial em uma única carreira de Oficial de Polícia Civil de Nível Superior.</p>
+        <p>A nova lei institui cinco benefícios para os integrantes da Polícia Civil: auxílio-saúde, auxílio-educação, adicional noturno, adicional de função e adicional de cargo de confiança para servidores que cuidam de dependentes com deficiência física ou intelectual. Estabelece jornada máxima de 40 horas semanais com pagamento de horas extraordinárias, cria novas regras para gratificações e promoções por merecimento, antiguidade, bravura e post-mortem. Prevê também concursos públicos regulares, plano de carreira transparente e programa de qualificação profissional obrigatória para todos os cargos.</p>`
+    },
+    {
+        id: 42, numero: "7.820", tipo: "Lei", cidade: "rio", categoria: "civil", ano: 2025, data: "10/03/2025",
+        titulo: "Programa de Assistência Integral às Mulheres Vítimas de Violência Sexual",
+        resumo: "Institui o Programa de Assistência Integral às Mulheres Vítimas de Estupro no Município do Rio de Janeiro, com suporte psicológico, médico e jurídico.",
+        fonte: "Câmara Municipal do Rio de Janeiro - Lei nº 7.820/2025",
+        fonteUrl: "https://www.camara.rio/atividade-parlamentar/legislacao/municipal/leis-ordinarias",
+        autor: "Comissão de Defesa dos Direitos da Mulher - Câmara Municipal",
+        conteudo: `<p>A Lei nº 7.820/2025 institui o Programa de Assistência Integral às Mulheres Vítimas de Violência Sexual no Município do Rio de Janeiro, com base no PL 2.892-A/2024. O programa garante às mulheres que engravidaram em decorrência de violência sexual acesso a atendimento multidisciplinar e humanizado na rede pública municipal, incluindo apoio psicológico, assistência social, orientação jurídica e acompanhamento médico-ginecológico.</p>
+        <p>A lei prevê o funcionamento de núcleos de atendimento especializados nas Unidades de Pronto Atendimento (UPAs) e hospitais municipais, com equipes treinadas para acolhimento sem julgamento. Estabelece também fluxo de atendimento integrado com delegacias especializadas (DEAM), Ministério Público e defensorias. Obriga a realização de capacitação anual dos profissionais de saúde em violência de gênero, define prazo máximo de 24 horas para o primeiro atendimento após denúncia e garante sigilo absoluto das informações das vítimas.</p>`
+    },
+    {
+        id: 43, numero: "7.835", tipo: "Lei", cidade: "rio", categoria: "ambiental", ano: 2025, data: "20/03/2025",
+        titulo: "Programa Recicla Rio - Gestão de Resíduos no Carnaval e Eventos de Massa",
+        resumo: "Cria o Programa Recicla Rio, com coleta seletiva e destinação adequada de resíduos gerados durante o Carnaval e grandes eventos na cidade.",
+        fonte: "Câmara Municipal do Rio de Janeiro - Lei nº 7.835/2025",
+        fonteUrl: "https://www.camara.rio/atividade-parlamentar/legislacao/municipal/leis-ordinarias",
+        autor: "Comissão de Meio Ambiente da Câmara Municipal do Rio",
+        conteudo: `<p>A Lei nº 7.835/2025 cria o Programa Recicla Rio, política municipal de gestão de resíduos sólidos durante o Carnaval e outros grandes eventos realizados na cidade do Rio de Janeiro. O programa visa promover a coleta seletiva, a destinação adequada dos resíduos e a valorização dos catadores de materiais recicláveis, que historicamente têm papel central na limpeza da cidade.</p>
+        <p>A lei determina que a Comlurb (Companhia Municipal de Limpeza Urbana) disponibilize equipes especializadas e pontos de coleta seletiva em todos os polos de Carnaval (Sambódromo, Cinelândia, Bairro de Fátima, Zona Sul). Exige que os organizadores de eventos com mais de 5.000 pessoas apresentem Plano de Gestão de Resíduos como condição para obtenção de alvará. Cria parcerias com cooperativas de catadores para coleta de materiais recicláveis, garantindo geração de renda. Prevê metas de reciclagem progressivas: 20% em 2025, 35% em 2027 e 50% em 2030. Inclui programa de educação ambiental em escolas sobre descarte consciente e impactos dos resíduos na Baía de Guanabara e praias cariocas.</p>`
+    },
+    {
+        id: 44, numero: "7.840", tipo: "Lei", cidade: "rio", categoria: "educacao", ano: 2025, data: "26/03/2025",
+        titulo: "Prioridade de Vagas em Creches para Filhos de Mulheres em Situação de Violência Doméstica",
+        resumo: "Garante prioridade de matrícula ou transferência em creches e escolas da rede municipal para mulheres vítimas de violência doméstica e seus dependentes.",
+        fonte: "Câmara Municipal do Rio de Janeiro - Lei nº 7.840/2025",
+        fonteUrl: "https://www.camara.rio/atividade-parlamentar/legislacao/municipal/leis-ordinarias",
+        autor: "Vereadores da Comissão de Educação e Comissão da Mulher",
+        conteudo: `<p>A Lei nº 7.840/2025 garante prioridade de matrícula ou transferência em creches e instituições de ensino da rede pública municipal do Rio de Janeiro para filhos e dependentes de mulheres vítimas de violência doméstica e familiar. O dispositivo reconhece que o acesso à educação infantil é condição essencial para que a mulher em situação de violência possa buscar trabalho, renda e autonomia necessários para romper o ciclo de violência.</p>
+        <p>A lei estabelece que a prioridade é válida independentemente da existência de vagas regulares, obrigando a Secretaria Municipal de Educação a criar cadastro reserva especial para esses casos. O prazo máximo para a efetivação da matrícula é de cinco dias úteis após a apresentação de medida protetiva ou boletim de ocorrência. A lei também veda a divulgação do endereço da escola para o agressor, em proteção às vítimas, e determina treinamento das equipes pedagógicas para identificação e encaminhamento adequado de situações de violência doméstica envolvendo alunos.</p>`
+    },
+    {
+        id: 45, numero: "9.380", tipo: "Lei", cidade: "estado", categoria: "transporte", ano: 2025, data: "15/02/2025",
+        titulo: "Ampliação do Passe Livre Intermunicipal para Estudantes de Áreas Afastadas",
+        resumo: "Amplia o benefício do Passe Livre Intermunicipal para estudantes que necessitam de mais de um modal de transporte para chegar à escola em municípios do interior do RJ.",
+        fonte: "ALERJ - Lei nº 9.380/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Comissão de Transportes e Educação da ALERJ",
+        conteudo: `<p>A Lei nº 9.380/2025 amplia o Passe Livre Intermunicipal Estudantil do Estado do Rio de Janeiro, estendendo o benefício a alunos que residem em localidades rurais e periféricas que necessitam utilizar mais de um modal de transporte (ônibus intermunicipal + transporte complementar) para se deslocar até a instituição de ensino. Anteriormente, o benefício cobria apenas um único trecho de transporte.</p>
+        <p>A medida beneficia estimadamente 120 mil estudantes de ensino médio e superior de municípios como Campos dos Goytacazes, Itaperuna, Miracema, Santo Antônio de Pádua, Bom Jesus do Itabapoana e outras cidades do Norte e Noroeste Fluminense. A lei estabelece cadastro único estadual de beneficiários, com renovação semestral mediante comprovação de matrícula e frequência escolar mínima de 75%. Determina ainda que as empresas de transporte conveniadas disponibilizem dados de uso do passe livre para controle e auditoria do programa pela Secretaria Estadual de Transportes.</p>`
+    },
+    {
+        id: 46, numero: "9.350", tipo: "Lei", cidade: "estado", categoria: "transporte", ano: 2025, data: "05/02/2025",
+        titulo: "Regulamentação de Veículos de Micromobilidade Elétrica no Estado do Rio de Janeiro",
+        resumo: "Estabelece normas de circulação, segurança e registro para ciclomotores elétricos, motonetas elétricas, patinetes e bicicletas elétricas no Estado do Rio de Janeiro.",
+        fonte: "ALERJ - Lei nº 9.350/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Comissão de Transportes e Mobilidade Urbana da ALERJ",
+        conteudo: `<p>A Lei nº 9.350/2025 estabelece normas estaduais de circulação, segurança e responsabilidade para veículos de micromobilidade elétrica — ciclomotores elétricos, motonetas elétricas, patinetes eletrônicos, bicicletas elétricas e equipamentos de mobilidade individual autopropelidos — em complemento ao Código de Trânsito Brasileiro. A lei foi motivada pelo aumento expressivo de acidentes envolvendo esses veículos nas vias fluminenses.</p>
+        <p>O texto torna obrigatório o uso de capacete homologado pelo INMETRO para condutores de ciclomotores e motonetas elétricas, além de colete ou tiras refletivas em circulação noturna. Estipula penalidades de R$ 500 a R$ 2.000 para condutores flagrados sem equipamentos de segurança, com pontuação na CNH e possibilidade de apreensão do veículo. Para empresas de aluguel de patinetes e bicicletas elétricas compartilhadas, exige disponibilização de capacetes, cadastro de usuários, geofencing obrigatório e seguro contra acidentes de terceiros. Determina ainda que os municípios com mais de 50 mil habitantes regulamentem espaços específicos de estacionamento e circulação para esses veículos.</p>`
+    },
+    {
+        id: 47, numero: "9.400", tipo: "Lei", cidade: "estado", categoria: "administrativa", ano: 2025, data: "01/04/2025",
+        titulo: "Marco Estadual de Inteligência Artificial e Inovação Digital do Rio de Janeiro",
+        resumo: "Estabelece diretrizes para o uso ético, seguro e responsável de sistemas de inteligência artificial pela administração pública estadual e regula incentivos para empresas de IA.",
+        fonte: "ALERJ - Lei nº 9.400/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Comissão de Ciência, Tecnologia e Inovação da ALERJ",
+        conteudo: `<p>A Lei nº 9.400/2025 institui o Marco Estadual de Inteligência Artificial e Inovação Digital do Rio de Janeiro, estabelecendo princípios e diretrizes para o uso de sistemas de IA pela administração pública estadual e para o fomento do ecossistema de inovação digital fluminense. A lei é inspirada no Marco Regulatório Federal de IA (PL 2.338/2023) e nas melhores práticas internacionais de governança de IA.</p>
+        <p>No âmbito público, a lei exige que sistemas de IA utilizados em decisões que afetem direitos dos cidadãos (concessão de benefícios, scoring de crédito público, vigilância, reconhecimento facial) sejam submetidos à avaliação de impacto algorítmico e ao controle do Comitê Estadual de Ética em IA. Garante aos cidadãos o direito de revisão humana de decisões automatizadas, explicação sobre o funcionamento dos algoritmos e proteção contra discriminação algorítmica. Para o setor privado, cria o Selo RJ-IA Responsável para empresas que adotem boas práticas, com benefícios fiscais (redução de ICMS), acesso preferencial a contratos públicos e apoio do ecossistema de inovação. Define ainda o Programa Estadual de Capacitação em IA para servidores públicos e jovens das redes estaduais de ensino.</p>`
+    },
+    {
+        id: 48, numero: "3.650", tipo: "Lei", cidade: "niteroi", categoria: "urbanismo", ano: 2025, data: "20/02/2025",
+        titulo: "Plano de Mobilidade Urbana Sustentável de Niterói 2025-2035",
+        resumo: "Institui o Plano de Mobilidade Urbana Sustentável de Niterói, com diretrizes para ciclovias, transporte aquaviário, integração modal e redução de emissões.",
+        fonte: "Câmara Municipal de Niterói - Lei nº 3.650/2025",
+        fonteUrl: "https://www.camaraniteroi.rj.gov.br/legislacao",
+        autor: "Secretaria Municipal de Urbanismo e Mobilidade de Niterói",
+        conteudo: `<p>A Lei nº 3.650/2025 institui o Plano de Mobilidade Urbana Sustentável de Niterói (PMUS-Niterói) para o decênio 2025-2035, definindo diretrizes, metas e ações para tornar a cidade referência nacional em mobilidade limpa e integrada. O plano aproveita a vocação aquaviária de Niterói, sua topografia e o potencial das novas tecnologias de transporte.</p>
+        <p>Entre as principais metas estão: ampliar a malha cicloviária de 45 km para 120 km até 2030; integrar as linhas de ferry-boat com ônibus elétricos e bicicletas compartilhadas; criar três novos terminais intermodais (Centro, São Francisco e Região Oceânica); proibir circulação de ônibus a diesel no Centro histórico até 2028; implantar sistema de bicicletas elétricas compartilhadas (e-bike) em parceria com operadoras privadas; e reduzir em 40% as emissões de carbono do setor de transporte até 2035. O plano também prevê calçadas acessíveis, sinalização universal, aplicativo integrado de mobilidade e zona de baixa emissão (ZBE) nas áreas de maior concentração de serviços.</p>`
+    },
+    {
+        id: 49, numero: "3.390", tipo: "Lei", cidade: "duque-caxias", categoria: "saude", ano: 2024, data: "25/03/2024",
+        titulo: "Programa Caxias Saudável - Expansão da Atenção Primária à Saúde",
+        resumo: "Cria o Programa Caxias Saudável, com metas de expansão das Unidades Básicas de Saúde, ampliação do ESF e modernização da rede de saúde municipal.",
+        fonte: "Câmara Municipal de Duque de Caxias - Lei nº 3.390/2024",
+        fonteUrl: "https://www.cmdc.rj.gov.br",
+        autor: "Secretaria Municipal de Saúde de Duque de Caxias",
+        conteudo: `<p>A Lei nº 3.390/2024 cria o Programa Caxias Saudável, política municipal de fortalecimento da Atenção Primária à Saúde (APS) em Duque de Caxias, segundo maior município da Baixada Fluminense. O programa visa universalizar o acesso à Estratégia Saúde da Família (ESF), alcançando 90% de cobertura até 2026, com a construção e reforma de 20 Unidades Básicas de Saúde distribuídas pelos quatro distritos do município.</p>
+        <p>O plano prevê contratação de 500 novos profissionais de saúde (médicos, enfermeiros, técnicos e agentes comunitários) via concurso público, implantação do prontuário eletrônico integrado em toda a rede municipal, criação do Centro de Especialidades Médicas com 20 especialidades, ampliação do programa de saúde bucal nas escolas, inauguração de três novos Centros de Atenção Psicossocial (CAPS) e construção de uma UPA 24h no 4º Distrito. Prevê ainda programa especial de atenção à saúde da mulher, da criança e do adolescente, e combate às endemias (dengue, chikungunya, zika) com reforço das equipes de vigilância epidemiológica.</p>`
+    },
+    {
+        id: 50, numero: "9.360", tipo: "Lei", cidade: "estado", categoria: "saude", ano: 2025, data: "10/03/2025",
+        titulo: "Programa Estadual de Saúde Mental e Atenção Psicossocial do Rio de Janeiro",
+        resumo: "Institui o Programa Estadual de Saúde Mental, com expansão da Rede de Atenção Psicossocial, CAPS 24h e programa de saúde mental nas escolas.",
+        fonte: "ALERJ - Lei nº 9.360/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Secretaria Estadual de Saúde / Comissão de Saúde da ALERJ",
+        conteudo: `<p>A Lei nº 9.360/2025 institui o Programa Estadual de Saúde Mental e Atenção Psicossocial do Rio de Janeiro (PROSMAPS-RJ), em resposta ao crescimento dos transtornos mentais, especialmente entre jovens e populações em situação de vulnerabilidade agravada pela pandemia de Covid-19 e pela crise socioeconômica. O programa fortalece a Rede de Atenção Psicossocial (RAPS) estadual, articulando CAPS, residências terapêuticas, Unidades de Acolhimento e leitos hospitalares especializados.</p>
+        <p>A lei determina a criação de pelo menos um CAPS-III (funcionamento 24 horas) em todos os municípios com mais de 70 mil habitantes que ainda não dispõem desse serviço, além de ampliar o número de leitos de saúde mental em hospitais gerais. Institui o Programa Saúde Mental nas Escolas, com psicólogos e assistentes sociais nas unidades estaduais de ensino médio, e o Programa Prevenção ao Suicídio RJ, com linha direta de apoio e capacitação de professores e profissionais de saúde. Prevê também tratamento especializado para dependência química, integrado com política de redução de danos e reinserção social.</p>`
+    },
+    {
+        id: 51, numero: "7.860", tipo: "Lei", cidade: "rio", categoria: "seguranca", ano: 2025, data: "15/04/2025",
+        titulo: "Plataforma Digital de Proteção à Mulher Carioca",
+        resumo: "Cria plataforma digital integrada de apoio e proteção a mulheres vítimas de violência doméstica no Município do Rio de Janeiro.",
+        fonte: "Câmara Municipal do Rio de Janeiro - Lei nº 7.860/2025",
+        fonteUrl: "https://www.camara.rio/atividade-parlamentar/legislacao/municipal/leis-ordinarias",
+        autor: "Comissão de Defesa dos Direitos da Mulher - Câmara Municipal",
+        conteudo: `<p>A Lei nº 7.860/2025 determina a criação da Plataforma Digital de Proteção à Mulher Carioca, sistema integrado e gratuito que conecta vítimas de violência doméstica aos serviços de proteção disponíveis no município. A plataforma, acessível por aplicativo e web, oferece botão de pânico com geolocalização, chat com assistente social 24h, mapeamento de serviços (CRAM, DEAM, abrigos, defensorias), acompanhamento online de medidas protetivas e canais seguros de denúncia.</p>
+        <p>A lei garante sigilo absoluto dos dados das usuárias, com criptografia de ponta a ponta e armazenamento em servidores municipais, vedando compartilhamento com terceiros sem autorização judicial. Exige integração com o sistema da Polícia Civil, Ministério Público e Defensoria Pública Estadual para fluxo ágil de atendimento. Determina também que as servidoras públicas municipais com medidas protetivas de urgência tenham seus dados de lotação protegidos nos Portais da Transparência, impedindo que agressores as localizem. A Secretaria Municipal da Mulher é responsável pela gestão da plataforma, com relatórios públicos trimestrais de uso e efetividade.</p>`
+    },
+    {
+        id: 52, numero: "1.780", tipo: "Lei", cidade: "sao-goncalo", categoria: "comercial", ano: 2024, data: "12/06/2024",
+        titulo: "Programa de Regularização e Fomento ao Comércio Popular de São Gonçalo",
+        resumo: "Regulamenta o comércio ambulante e popular em São Gonçalo, com cadastro municipal, zoneamento, capacitação e acesso a crédito para pequenos comerciantes.",
+        fonte: "Câmara Municipal de São Gonçalo - Lei nº 1.780/2024",
+        fonteUrl: "https://www.cmsg.rj.gov.br/legislacao",
+        autor: "Secretaria Municipal de Desenvolvimento Econômico de São Gonçalo",
+        conteudo: `<p>A Lei nº 1.780/2024 institui o Programa de Regularização e Fomento ao Comércio Popular de São Gonçalo, buscando formalizar e apoiar os milhares de vendedores ambulantes e pequenos comerciantes que exercem atividade econômica nas feiras, calçadões e espaços públicos do segundo maior município do estado. O programa cria o Cadastro Municipal do Comerciante Popular (CMCP), com emissão de credencial gratuita.</p>
+        <p>A lei define zoneamento específico para o comércio ambulante, com áreas permitidas, restritas e proibidas, evitando conflitos com o tráfego e a acessibilidade. Oferece capacitação gratuita em gestão financeira, marketing digital, emissão de nota fiscal e higiene alimentar para vendedores de alimentos. Cria linha de microcrédito de até R$ 10.000 via banco municipal, com taxa de juros de 0,5% ao mês, destinada exclusivamente a cadastrados. Prevê ainda mutirão de formalização como MEI, com isenção de taxas municipais por 24 meses, e criação de Feiras do Povo nos bairros com menor cobertura de equipamentos comerciais formais.</p>`
+    },
+    {
+        id: 53, numero: "9.210", tipo: "Lei", cidade: "campos", categoria: "administrativa", ano: 2024, data: "08/05/2024",
+        titulo: "Fundo Municipal de Desenvolvimento de Campos dos Goytacazes",
+        resumo: "Cria o Fundo Municipal de Desenvolvimento de Campos, vinculado aos royalties do petróleo, com destinação obrigatória para infraestrutura, educação e saúde.",
+        fonte: "Câmara Municipal de Campos dos Goytacazes - Lei nº 9.210/2024",
+        fonteUrl: "https://www.camaracampos.rj.gov.br/legislacao",
+        autor: "Secretaria Municipal de Planejamento e Finanças de Campos",
+        conteudo: `<p>A Lei nº 9.210/2024 cria o Fundo Municipal de Desenvolvimento de Campos dos Goytacazes (FUMDEC), destinado a concentrar e gerir os recursos provenientes dos royalties do petróleo e do gás natural recebidos pelo município. Campos dos Goytacazes é um dos maiores beneficiários de royalties do Brasil, recebendo anualmente valores bilionários em função da exploração da Bacia de Campos.</p>
+        <p>A lei estabelece vinculação obrigatória dos recursos do FUMDEC: mínimo de 30% para infraestrutura urbana (saneamento, pavimentação, mobilidade), 25% para educação (construção e reforma de escolas, bolsas de estudo, qualificação profissional), 20% para saúde (hospitais, UBSs, equipamentos), 15% para habitação de interesse social e 10% para sustentabilidade ambiental e diversificação econômica. Cria Conselho Gestor com participação da sociedade civil para aprovação e fiscalização dos gastos, com publicidade total via portal de transparência. Define regras anti-cíclicas para proteger o fundo em anos de menor arrecadação de royalties, garantindo continuidade dos programas sociais.</p>`
+    },
+    {
+        id: 54, numero: "9.420", tipo: "Lei", cidade: "estado", categoria: "habitacao", ano: 2025, data: "05/05/2025",
+        titulo: "Programa Estadual Morar Bem RJ - Habitação de Interesse Social",
+        resumo: "Cria o Programa Morar Bem RJ, voltado à construção de habitações populares, regularização fundiária e urbanização de assentamentos precários no Estado do Rio de Janeiro.",
+        fonte: "ALERJ - Lei nº 9.420/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Secretaria Estadual de Desenvolvimento Urbano e Habitação",
+        conteudo: `<p>A Lei nº 9.420/2025 cria o Programa Estadual Morar Bem RJ, política pública habitacional integrada para reduzir o déficit habitacional do Estado do Rio de Janeiro — estimado em 500 mil unidades. O programa articula recursos estaduais com o Minha Casa Minha Vida federal, royalties do petróleo e parcerias público-privadas para viabilizar habitação digna a famílias de baixa renda.</p>
+        <p>O Morar Bem RJ tem três eixos principais: construção de novas unidades habitacionais (meta de 100 mil unidades em dez anos), regularização fundiária urbana em comunidades informais consolidadas (com emissão de título de propriedade a moradores há mais de cinco anos) e urbanização de assentamentos precários com infraestrutura completa (água, esgoto, pavimentação, iluminação, coleta de lixo). Estabelece prioridade de atendimento a famílias com renda de até 2 salários mínimos, mulheres chefes de família, idosos, pessoas com deficiência e vítimas de desastres naturais. Cria o Fundo Estadual de Habitação de Interesse Social (FEHIS-RJ), com dotação mínima anual garantida em lei orçamentária, e o Conselho Estadual de Habitação com participação comunitária paritária.</p>`
+    },
+    {
+        id: 55, numero: "9.390", tipo: "Lei", cidade: "estado", categoria: "trabalhista", ano: 2025, data: "20/04/2025",
+        titulo: "Regulamentação do Trabalho por Plataformas Digitais no Estado do Rio de Janeiro",
+        resumo: "Estabelece direitos e garantias aos trabalhadores de aplicativos de transporte, delivery e serviços no Estado do Rio de Janeiro, incluindo piso mínimo, seguro e benefícios.",
+        fonte: "ALERJ - Lei nº 9.390/2025",
+        fonteUrl: "https://www.alerj.rj.gov.br/Pagina/Atividade-Parlamentar/Pesquisa-Legislativa",
+        autor: "Comissão de Trabalho e Emprego da ALERJ",
+        conteudo: `<p>A Lei nº 9.390/2025 estabelece garantias mínimas para os trabalhadores por plataformas digitais no Estado do Rio de Janeiro — motoristas de aplicativo, entregadores e prestadores de serviços — em complemento à regulamentação federal do setor (Lei Federal nº 14.297/2022 e Marco Legal dos Motoristas de Aplicativo de 2024). A lei estadual avança nas proteções, adaptando-as à realidade fluminense, onde mais de 300 mil trabalhadores dependem dessas plataformas como fonte de renda principal.</p>
+        <p>A lei garante: remuneração mínima equivalente a R$ 32 por hora efetivamente trabalhada (com atualização anual pelo INPC); seguro de acidente de trabalho obrigatório custeado pelas plataformas; acesso gratuito a plano de saúde coletivo com cobertura básica; limite de 8 horas diárias de conexão às plataformas (com pagamento de adicional para horas extras); direito a 15 dias de afastamento remunerado por ano em caso de doença ou acidente; mecanismo de contestação de desligamentos arbitrários e criação de ouvidoria estadual de plataformas digitais. As empresas que descumprirem a lei ficam sujeitas a multas de até R$ 500.000 e suspensão de operação no estado.</p>`
     }
 ];
 
