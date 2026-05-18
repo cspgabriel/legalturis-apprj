@@ -147,6 +147,19 @@ class LegiRJ {
             this.scrollToResults();
         });
 
+        // Enter no input do hero → vai pra busca completa (acervo de 286+ leis)
+        this.searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const q = this.searchInput.value.trim();
+                if (q) {
+                    window.location.href = 'buscar.html?q=' + encodeURIComponent(q);
+                } else {
+                    window.location.href = 'buscar.html';
+                }
+            }
+        });
+
         document.querySelectorAll('.view-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));

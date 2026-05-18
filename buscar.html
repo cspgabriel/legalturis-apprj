@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar leis do RJ — LegalTuris</title>
+  <meta name="description" content="Busca em centenas de normas jurídicas do Rio de Janeiro: leis estaduais, decretos, leis municipais e federais aplicáveis." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .search-wrap{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+    .search-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}
+    .search-bar input[type=text]{flex:1;min-width:240px;padding:.7rem 1rem;border-radius:8px;border:1px solid #ccc;font-size:1rem}
+    .search-bar button{padding:.7rem 1.2rem;background:#4a76d8;color:white;border:0;border-radius:8px;font-weight:600;cursor:pointer}
+    .filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+    .filters select{padding:.5rem .7rem;border-radius:6px;border:1px solid #ccc;background:white}
+    .stats{color:#666;font-size:.9rem;margin-bottom:1rem}
+    .results{display:grid;gap:.8rem}
+    .result-card{padding:1rem 1.2rem;border:1px solid #e5e5e5;border-radius:8px;background:white;transition:.15s}
+    .result-card:hover{border-color:#4a76d8;box-shadow:0 2px 8px rgba(74,118,216,.15)}
+    .result-card h3{margin:0 0 .35rem 0;font-size:1.05rem}
+    .result-card h3 a{color:#1a2b6b;text-decoration:none}
+    .result-card .badges{margin-bottom:.4rem}
+    .badge{display:inline-block;padding:.15rem .55rem;border-radius:5px;background:#eef;color:#225;font-size:.78rem;margin-right:.25rem}
+    .result-card .resumo{color:#444;font-size:.94rem;line-height:1.45}
+    .pagination{display:flex;justify-content:center;gap:.3rem;margin:2rem 0;flex-wrap:wrap}
+    .pagination button{padding:.45rem .8rem;border:1px solid #ccc;background:white;border-radius:5px;cursor:pointer}
+    .pagination button.active{background:#4a76d8;color:white;border-color:#4a76d8}
+    .pagination button:disabled{opacity:.4;cursor:not-allowed}
+    .empty{text-align:center;padding:3rem 1rem;color:#666}
+    .empty a{color:#4a76d8;font-weight:600}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">⚖️ LegalTuris RJ</a>
+    <nav><a href="index.html">Início</a> · <a href="buscar.html" aria-current="page">Buscar</a> · <a href="noticias.html">Notícias</a></nav>
+  </header>
+
+  <main class="search-wrap">
+    <h1>🔎 Buscar no acervo</h1>
+    <p id="acervo-info" class="stats">Carregando acervo…</p>
+
+    <form id="search-form" class="search-bar" onsubmit="event.preventDefault();aplicar();">
+      <input id="q" type="text" placeholder='Ex.: "ICMS", "9.064", "ambiental Niterói"' autofocus />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="filters">
+      <select id="cidade"><option value="">Todas as cidades</option></select>
+      <select id="categoria"><option value="">Todas as categorias</option></select>
+      <select id="ano"><option value="">Qualquer ano</option></select>
+      <select id="tipo">
+        <option value="">Qualquer tipo</option>
+        <option value="Lei">Lei</option>
+        <option value="Decreto">Decreto</option>
+        <option value="Lei Complementar">Lei Complementar</option>
+        <option value="Resolução">Resolução</option>
+        <option value="Portaria">Portaria</option>
+      </select>
+      <button type="button" onclick="limparFiltros()" style="padding:.5rem .8rem;background:#eee;border:0;border-radius:6px;cursor:pointer">Limpar</button>
+    </div>
+
+    <div id="stats" class="stats"></div>
+    <div id="results" class="results"></div>
+    <div id="pagination" class="pagination"></div>
+
+    <div id="fallback-lexml" class="empty" hidden>
+      <h3>Não achou o que procurava?</h3>
+      <p>Nossa base tem <span id="total-base"></span> normas indexadas — mas o RJ tem mais de 50.000.</p>
+      <p>
+        <a id="lexml-link" href="https://www.lexml.gov.br/" target="_blank" rel="noopener">
+          🔗 Buscar "<span id="lexml-termo"></span>" no LexML.gov.br (acervo oficial completo)
+        </a>
+      </p>
+    </div>
+  </main>
+
+  <script src="db-client.js"></script>
+  <script>
+    const db = new LeiDB();
+    let estado = { page: 1, pageSize: 20, termo: "", cidade: "", categoria: "", ano: "", tipo: "" };
+
+    function lerURL() {
+      const p = new URLSearchParams(location.search);
+      estado.termo = p.get("q") || "";
+      estado.cidade = p.get("cidade") || "";
+      estado.categoria = p.get("categoria") || "";
+      estado.ano = p.get("ano") || "";
+      estado.tipo = p.get("tipo") || "";
+      estado.page = parseInt(p.get("page") || "1", 10);
+      document.getElementById("q").value = estado.termo;
+    }
+
+    function escreverURL() {
+      const p = new URLSearchParams();
+      if (estado.termo) p.set("q", estado.termo);
+      if (estado.cidade) p.set("cidade", estado.cidade);
+      if (estado.categoria) p.set("categoria", estado.categoria);
+      if (estado.ano) p.set("ano", estado.ano);
+      if (estado.tipo) p.set("tipo", estado.tipo);
+      if (estado.page > 1) p.set("page", estado.page);
+      const qs = p.toString();
+      history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+    }
+
+    function escapeHtml(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+
+    async function popularFacetas() {
+      const f = db.facets();
+      if (!f) return;
+      const fill = (sel, obj, label = (k,v)=>`${k} (${v})`) => {
+        const el = document.getElementById(sel);
+        const entries = Object.entries(obj).sort(([a],[b]) => a.localeCompare(b));
+        for (const [k, v] of entries) {
+          const opt = document.createElement("option");
+          opt.value = k;
+          opt.textContent = label(k, v);
+          el.appendChild(opt);
+        }
+      };
+      fill("cidade", f.cidades);
+      fill("categoria", f.categorias);
+      const anos = Object.entries(f.anos).sort(([a],[b]) => Number(b) - Number(a));
+      const elAno = document.getElementById("ano");
+      for (const [a, v] of anos) {
+        const o = document.createElement("option");
+        o.value = a;
+        o.textContent = `${a} (${v})`;
+        elAno.appendChild(o);
+      }
+      document.getElementById("cidade").value = estado.cidade;
+      document.getElementById("categoria").value = estado.categoria;
+      document.getElementById("ano").value = estado.ano;
+      document.getElementById("tipo").value = estado.tipo;
+    }
+
+    async function rodar() {
+      const out = document.getElementById("results");
+      const stats = document.getElementById("stats");
+      out.innerHTML = `<p style="color:#888">Buscando…</p>`;
+      const res = await db.search(estado);
+      stats.textContent = res.total
+        ? `${res.total.toLocaleString("pt-BR")} resultado(s) · página ${res.page} de ${res.pages}`
+        : "Nenhum resultado.";
+
+      if (!res.total) {
+        out.innerHTML = "";
+        const fb = document.getElementById("fallback-lexml");
+        fb.hidden = false;
+        document.getElementById("total-base").textContent = db.index.total.toLocaleString("pt-BR");
+        document.getElementById("lexml-termo").textContent = estado.termo || "Rio de Janeiro";
+        document.getElementById("lexml-link").href =
+          "https://www.lexml.gov.br/busca/search?keyword=" + encodeURIComponent(estado.termo || "Rio de Janeiro");
+        renderPaginacao(0, 1);
+        return;
+      }
+      document.getElementById("fallback-lexml").hidden = true;
+
+      out.innerHTML = res.leis.map(l => `
+        <div class="result-card">
+          <div class="badges">
+            <span class="badge">${escapeHtml(l.tipo)}</span>
+            <span class="badge">${escapeHtml(l.cidade)}</span>
+            <span class="badge">${escapeHtml(l.categoria)}</span>
+            <span class="badge" style="background:#eee;color:#666">${l.ano}</span>
+          </div>
+          <h3><a href="lei.html?id=${encodeURIComponent(l.id)}">${escapeHtml(l.tipo)} nº ${escapeHtml(l.numero)} — ${escapeHtml(l.titulo)}</a></h3>
+          ${l.resumo ? `<p class="resumo">${escapeHtml(l.resumo.slice(0, 250))}${l.resumo.length > 250 ? "…" : ""}</p>` : ""}
+        </div>
+      `).join("");
+
+      renderPaginacao(res.pages, res.page);
+    }
+
+    function renderPaginacao(total, atual) {
+      const p = document.getElementById("pagination");
+      if (total <= 1) { p.innerHTML = ""; return; }
+      const btns = [];
+      const fazerBtn = (n, label = n, disabled = false) => {
+        btns.push(`<button ${disabled ? "disabled" : ""} class="${n === atual ? "active" : ""}" onclick="irPara(${n})">${label}</button>`);
+      };
+      fazerBtn(Math.max(1, atual - 1), "‹", atual === 1);
+      const range = new Set([1, total, atual - 1, atual, atual + 1]);
+      for (let i = 1; i <= total; i++) if (range.has(i)) fazerBtn(i);
+      fazerBtn(Math.min(total, atual + 1), "›", atual === total);
+      p.innerHTML = btns.join("");
+    }
+
+    window.irPara = (n) => { estado.page = n; escreverURL(); rodar(); scrollTo({top:0,behavior:"smooth"}); };
+
+    window.aplicar = () => {
+      estado.termo = document.getElementById("q").value.trim();
+      estado.cidade = document.getElementById("cidade").value;
+      estado.categoria = document.getElementById("categoria").value;
+      estado.ano = document.getElementById("ano").value;
+      estado.tipo = document.getElementById("tipo").value;
+      estado.page = 1;
+      escreverURL();
+      rodar();
+    };
+
+    window.limparFiltros = () => {
+      estado = { page:1, pageSize:20, termo:"", cidade:"", categoria:"", ano:"", tipo:"" };
+      document.getElementById("q").value = "";
+      document.getElementById("cidade").value = "";
+      document.getElementById("categoria").value = "";
+      document.getElementById("ano").value = "";
+      document.getElementById("tipo").value = "";
+      escreverURL();
+      rodar();
+    };
+
+    ["cidade","categoria","ano","tipo"].forEach(id => document.getElementById(id).addEventListener("change", aplicar));
+
+    (async () => {
+      lerURL();
+      try {
+        await db.init();
+      } catch {
+        document.getElementById("acervo-info").innerHTML = `<span style="color:#c00">Falha ao carregar acervo. <a href="https://www.lexml.gov.br/" target="_blank">Use o LexML.gov.br</a>.</span>`;
+        return;
+      }
+      const i = db.index;
+      document.getElementById("acervo-info").innerHTML =
+        `Acervo: <strong>${i.total.toLocaleString("pt-BR")}</strong> normas · ${Object.keys(i.cidades).length} cidades · atualizado em ${new Date(i.generated_at).toLocaleDateString("pt-BR")}`;
+      await popularFacetas();
+      await rodar();
+    })();
+  </script>
+</body>
+</html>
