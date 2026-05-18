@@ -131,8 +131,8 @@ class LegiRJ {
         this.sortBy.addEventListener('change', () => this.applyFilters());
         this.clearFiltersBtn.addEventListener('click', () => this.clearFilters());
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
-        this.favoritesBtn.addEventListener('click', () => this.showFavorites());
-        this.shareAppBtn.addEventListener('click', () => this.shareApp('native'));
+        if (this.favoritesBtn) this.favoritesBtn.addEventListener('click', () => this.showFavorites());
+        if (this.shareAppBtn) this.shareAppBtn.addEventListener('click', () => this.shareApp('native'));
 
         document.querySelectorAll('.tag').forEach(tag => {
             tag.addEventListener('click', () => {
