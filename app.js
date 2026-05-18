@@ -131,8 +131,8 @@ class LegiRJ {
         this.sortBy.addEventListener('change', () => this.applyFilters());
         this.clearFiltersBtn.addEventListener('click', () => this.clearFilters());
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
-        this.favoritesBtn.addEventListener('click', () => this.showFavorites());
-        this.shareAppBtn.addEventListener('click', () => this.shareApp('native'));
+        if (this.favoritesBtn) this.favoritesBtn.addEventListener('click', () => this.showFavorites());
+        if (this.shareAppBtn) this.shareAppBtn.addEventListener('click', () => this.shareApp('native'));
 
         document.querySelectorAll('.tag').forEach(tag => {
             tag.addEventListener('click', () => {
@@ -399,11 +399,20 @@ class LegiRJ {
 
     renderLeis() {
         if (this.filteredLeis.length === 0) {
+            const term = (this.searchInput.value || '').trim();
+            const lexmlUrl = 'https://www.lexml.gov.br/busca/search?'
+                + 'f1-localidade=' + encodeURIComponent('Rio de Janeiro')
+                + '&f1-tipoDocumento=' + encodeURIComponent('Legislação')
+                + (term ? '&keyword=' + encodeURIComponent(term) : '');
             this.resultsList.innerHTML = `
                 <div style="grid-column: 1/-1; text-align: center; padding: 4rem 2rem; color: var(--text-muted);">
                     <div style="font-size: 4rem; margin-bottom: 1rem;">🔍</div>
-                    <h3 style="margin-bottom: 0.5rem; color: var(--text);">Nenhuma lei encontrada</h3>
-                    <p>Tente ajustar os filtros ou usar outros termos de busca</p>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--text);">Nenhuma lei encontrada no nosso acervo curado</h3>
+                    <p style="margin-bottom:1.25rem;">Tente outros termos — ou consulte o acervo oficial do LexML (~50 mil normas do RJ).</p>
+                    <a href="${lexmlUrl}" target="_blank" rel="noopener"
+                       style="display:inline-block;padding:0.75rem 1.5rem;background:#0066CC;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+                       Buscar${term ? ' "' + term.replace(/"/g,'&quot;') + '"' : ''} no LexML.gov.br ↗
+                    </a>
                 </div>
             `;
             return;
@@ -705,7 +714,7 @@ class LegiRJ {
 
     shareApp(platform) {
         const url = window.location.href;
-        const text = '⚖️ LegiRJ - O maior portal de Leis e Decretos do RJ! Mais de 40 leis catalogadas com fontes oficiais.';
+        const text = '⚖️ LegiRJ - O maior portal de Leis e Decretos do RJ! Mais de 55 leis catalogadas com fontes oficiais.';
 
         const links = {
             whatsapp: `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`,
