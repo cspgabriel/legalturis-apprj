@@ -399,11 +399,20 @@ class LegiRJ {
 
     renderLeis() {
         if (this.filteredLeis.length === 0) {
+            const term = (this.searchInput.value || '').trim();
+            const lexmlUrl = 'https://www.lexml.gov.br/busca/search?'
+                + 'f1-localidade=' + encodeURIComponent('Rio de Janeiro')
+                + '&f1-tipoDocumento=' + encodeURIComponent('Legislação')
+                + (term ? '&keyword=' + encodeURIComponent(term) : '');
             this.resultsList.innerHTML = `
                 <div style="grid-column: 1/-1; text-align: center; padding: 4rem 2rem; color: var(--text-muted);">
                     <div style="font-size: 4rem; margin-bottom: 1rem;">🔍</div>
-                    <h3 style="margin-bottom: 0.5rem; color: var(--text);">Nenhuma lei encontrada</h3>
-                    <p>Tente ajustar os filtros ou usar outros termos de busca</p>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--text);">Nenhuma lei encontrada no nosso acervo curado</h3>
+                    <p style="margin-bottom:1.25rem;">Tente outros termos — ou consulte o acervo oficial do LexML (~50 mil normas do RJ).</p>
+                    <a href="${lexmlUrl}" target="_blank" rel="noopener"
+                       style="display:inline-block;padding:0.75rem 1.5rem;background:#0066CC;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">
+                       Buscar${term ? ' "' + term.replace(/"/g,'&quot;') + '"' : ''} no LexML.gov.br ↗
+                    </a>
                 </div>
             `;
             return;
