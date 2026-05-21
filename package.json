@@ -1,0 +1,15 @@
+{
+  "name": "legalturis-apprj",
+  "version": "2.0.0",
+  "description": "Portal de Leis e Decretos do Rio de Janeiro",
+  "type": "commonjs",
+  "scripts": {
+    "generate": "node generate-pages.js",
+    "generate-hubs": "node generate-hubs.js",
+    "merge": "node scripts/merge-into-data.cjs --apply",
+    "sync": "node scripts/sync-from-generation.cjs",
+    "build": "node scripts/merge-into-data.cjs --apply && node generate-pages.js && node generate-hubs.js && node scripts/sync-from-generation.cjs"
+  },
+  "private": true,
+  "repository": "github:cspgabriel/legalturis-apprj"
+}
